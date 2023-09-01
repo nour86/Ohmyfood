@@ -1,30 +1,8 @@
-@import 'config';
-@import 'restaurants';
-@import 'home';
+@import 'base/normalize';
+@import 'components/all';
+@import 'layouts/all';
+@import 'pages/all';
 
-body {
-  display: flex;
-  flex-direction: column;
-  margin:0;
-  width: 100%;
-  max-width: 1440px;
-}
-
-main {
-  width: 100%;
-  max-width: 1440px;
-  }
-
-
-section {  
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin:0;
-  padding:2vw;
-  width: 100%;
-}
 
 article {
   display:flex;
@@ -35,10 +13,6 @@ article {
   width: 100%;
 }
 
-img {
-  width: 100%;
-  object-fit: cover;
-}
 
 header {
     display:flex;
