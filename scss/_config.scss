@@ -3,25 +3,31 @@ $primary-color:#9356DC;
 $secondary-color:#FF79DA;
 $tertiary-color:#99E2D0;
 
+$primary-bg-color:#F6F6F6;
+$secondary--bg-color:#EAEAEA;
+$tertiary-bg-color:#353535;
+
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
+  font-family: 'Roboto', sans-serif;
 }
 
-section {  display:flex;
-  flex-direction: column;}
-
-@mixin transition-ease {
-  transition: all 0.5s ease-in-out;
+h2 {
+  font-family: 'Shrikhand', cursive;
 }
 
-@function set-text-color($color) {
-  @if (lightness($color) > 40%) {
-    @return #000;
-  } @else {
-    @return #fff;
-  }
+ul {
+  list-style-type: none;
+}
+
+a {
+  color:black;
+  text-decoration: none;
+}
+
+i {
+  margin:1rem;
 }

@@ -1,0 +1,35 @@
+
+.home__localisation {
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    background-color: $secondary--bg-color;
+}
+
+
+.restaurants {
+    display:flex;
+    flex-direction: column;
+    margin:0;
+    padding:20px;
+    border-radius: 20px;
+    background-color: $primary-bg-color;
+}
+
+.restaurant-card {
+    a {
+        display:flex;
+        flex-direction: column;
+        width:100%;
+    }
+
+    &__content {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+}
+
+
