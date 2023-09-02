@@ -2,32 +2,3 @@
 @import 'components/all';
 @import 'layouts/all';
 @import 'pages/all';
-
-
-article {
-  display:flex;
-  flex-direction: column;
-  margin:0;
-  padding:2vw;
-  border-radius: 20px;
-  width: 100%;
-}
-
-
-header {
-    display:flex;
-    width:100%;
-    justify-content: center;
-    z-index: 2;
-    width: 100%;
-    padding: 1rem;
-  }
-
-
-footer {
-    font-size: 1rem;
-    padding: 1rem;
-    background-color: $tertiary-bg-color;
-    color: white;
-    h2 {color:white;}
-  }

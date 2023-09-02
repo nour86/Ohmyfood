@@ -1,2 +1,12 @@
 @import 'food-card';
 @import 'restaurant-card';
+
+
+article {
+    display:flex;
+    flex-direction: column;
+    margin:0;
+    padding:2vw;
+    border-radius: 20px;
+    width: 100%;
+  }

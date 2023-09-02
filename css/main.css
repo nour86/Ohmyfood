@@ -5,7 +5,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-h2 {
+h2, h3 {
   font-family: "Shrikhand", cursive;
 }
 
@@ -18,8 +18,9 @@ a {
   text-decoration: none;
 }
 
-i {
-  margin: 1rem;
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 body {
@@ -35,6 +36,10 @@ main {
   max-width: 1440px;
 }
 
+.restaurant-card {
+  width: 100%;
+  height: 66vw;
+}
 .restaurant-card a {
   display: flex;
   flex-direction: column;
@@ -51,6 +56,50 @@ main {
   justify-content: space-between;
 }
 
+article {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 2vw;
+  border-radius: 20px;
+  width: 100%;
+}
+
+footer {
+  padding-left: 25px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background-color: #353535;
+  color: white;
+}
+footer h3 {
+  color: white;
+  margin: 1rem 0;
+}
+footer i {
+  margin: 0;
+  padding: 0 10px 0 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 4rem;
+  padding: 1rem;
+}
+header img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 197px;
+}
+header i {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+}
+
 section {
   display: flex;
   flex-direction: column;
@@ -64,8 +113,20 @@ section {
 .home__localisation {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
+  height: 50px;
   background-color: #EAEAEA;
+}
+.home__localisation i {
+  margin-right: 1rem;
+}
+.home__intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .restaurants {
@@ -75,32 +136,4 @@ section {
   padding: 20px;
   border-radius: 20px;
   background-color: #F6F6F6;
-}
-
-article {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 2vw;
-  border-radius: 20px;
-  width: 100%;
-}
-
-header {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  z-index: 2;
-  width: 100%;
-  padding: 1rem;
-}
-
-footer {
-  font-size: 1rem;
-  padding: 1rem;
-  background-color: #353535;
-  color: white;
-}
-footer h2 {
-  color: white;
 }/*# sourceMappingURL=main.css.map */
