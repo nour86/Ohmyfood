@@ -3,7 +3,8 @@ footer {
     padding-left: 25px;
     font-size: 1rem;
     line-height: 1.5rem;
-    background: set-text-color($tertiary-bg-color);
+    background: $tertiary-bg-color;
+    color:set-text-color($tertiary-bg-color);
     h3 {
         margin:1rem 0;
     }

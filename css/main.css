@@ -97,11 +97,10 @@ footer {
   padding-left: 25px;
   font-size: 1rem;
   line-height: 1.5rem;
-  background-color: #353535;
-  color: white;
+  background: #353535;
+  color: #fff;
 }
 footer h3 {
-  color: white;
   margin: 1rem 0;
 }
 footer i {
