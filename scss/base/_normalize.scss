@@ -14,8 +14,27 @@ $tertiary-bg-color:#353535;
   font-family: 'Roboto', sans-serif;
 }
 
+p {
+  font-size:1rem;
+  font-weight:300;
+}
+
+h1 {
+  font-size:1.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
 h3 {
   font-family: 'Shrikhand', cursive;
+}
+
+em {
+  font-style: normal;
 }
 
 ul {
@@ -28,20 +47,5 @@ a {
 }
 
 img {
-
   object-fit: cover;
 }
-
-body {
-    display: flex;
-    flex-direction: column;
-    margin:0;
-    width: 100%;
-    max-width: 1440px;
-  }
-
-
-main {
-  width: 100%;
-  max-width: 1440px;
-  }

@@ -5,8 +5,27 @@
   font-family: "Roboto", sans-serif;
 }
 
+p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
 h3 {
   font-family: "Shrikhand", cursive;
+}
+
+em {
+  font-style: normal;
 }
 
 ul {
@@ -23,29 +42,17 @@ img {
      object-fit: cover;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  width: 100%;
-  max-width: 1440px;
-}
-
-main {
-  width: 100%;
-  max-width: 1440px;
-}
-
 .restaurant-card {
   width: 100%;
   height: 66vw;
+  margin-bottom: 1rem;
 }
 .restaurant-card__content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  padding: 5px;
+  padding: 13px;
 }
 .restaurant-card img {
   height: 75%;
@@ -60,10 +67,20 @@ main {
   height: 100%;
 }
 
+button {
+  height: 50px;
+  padding: 0px 19px;
+  margin: 30px;
+  border-radius: 25px;
+  border: 2px solid black;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
 article {
   display: flex;
   flex-direction: column;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.5));
   background-color: white;
   margin: 0;
   padding: 0;
@@ -120,6 +137,22 @@ section {
   width: 100%;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 100%;
+  max-width: 1440px;
+}
+
+main {
+  width: 100%;
+  max-width: 1440px;
+}
+
+.home {
+  background-color: #F6F6F6;
+}
 .home__localisation {
   display: flex;
   justify-content: center;
@@ -133,7 +166,9 @@ section {
 }
 .home__intro {
   flex-direction: column;
+  align-items: center;
   text-align: center;
+  padding: 2.5rem;
 }
 
 .restaurants {
@@ -144,5 +179,6 @@ section {
 }
 .restaurants__grid {
   display: flex;
+  flex-direction: column;
   width: 100%;
 }/*# sourceMappingURL=main.css.map */
