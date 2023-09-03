@@ -7,7 +7,7 @@
 
 p {
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 100;
 }
 
 h1 {
@@ -68,19 +68,47 @@ img {
 }
 
 button {
-  height: 50px;
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.2));
+  height: 13vw;
   padding: 0px 19px;
   margin: 30px;
   border-radius: 25px;
-  border: 2px solid black;
+  border: 0px solid black;
   font-size: 1.1rem;
   font-weight: bold;
+}
+button.cta {
+  background: linear-gradient(#FF79DA, #9356DC);
+  font-weight: 100;
+  color: white;
+}
+
+.instructions button {
+  width: 100%;
+  height: 19vw;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  justify-content: center;
+}
+.instructions button .dot {
+  background: #9356DC;
+  color: #fff;
+  position: absolute;
+  left: -10px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.instructions button i {
+  color: grey;
 }
 
 article {
   display: flex;
   flex-direction: column;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.2));
   background-color: white;
   margin: 0;
   padding: 0;
@@ -158,7 +186,7 @@ main {
   align-items: center;
   height: 50px;
   width: 100%;
-  background-color: #EAEAEA;
+  background: linear-gradient(0deg, #EAEAEA 95%, lightgrey 100%);
 }
 .home__localisation i {
   margin-right: 1rem;
@@ -170,9 +198,16 @@ main {
   padding: 2.5rem;
 }
 
+.instructions {
+  padding: 20px;
+}
+.instructions button:nth-child(4) i {
+  color: #9356DC;
+}
+
 .restaurants {
   margin: 0;
-  padding: 17px;
+  padding: 20px;
   border-radius: 20px;
   background-color: #F6F6F6;
 }
