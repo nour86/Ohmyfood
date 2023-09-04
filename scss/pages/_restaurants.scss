@@ -1,1 +1,34 @@
 
+.menu {
+    border-radius: 30px;
+    position:relative;
+    padding: 1rem;
+    top:-30px;
+    background-color: $primary-bg-color;
+    &_title{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin:1rem;
+        h1 {font-family:'Shrikhand', cursive;}
+    }
+    &_section {
+        width: 100%;
+        h2 {
+            font-size: 1rem;
+            font-weight: 300;
+            @include stroke-underline;
+            margin-bottom: 1rem;
+        }
+
+        h3{
+            font-size: 1.125rem;
+            font-weight:500;}
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+
+}   

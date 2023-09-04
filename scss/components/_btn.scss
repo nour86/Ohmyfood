@@ -4,15 +4,15 @@ button {
     @include box-shadow;
     height: 13vw;
     padding:0px 19px;
-    margin: 30px;
+    margin: 30px 0px;
     border-radius: 25px;
     border: 0px solid black;
     font-size: 1.1rem;
-    font-weight: bold;
+    font-weight: 600;
     &.cta {
         background:
         linear-gradient($secondary-color, $primary-color);
-        font-weight: 100;
+        font-weight: 400;
         color:white;
     }
 }

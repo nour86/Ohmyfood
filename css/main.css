@@ -6,22 +6,23 @@
 }
 
 p {
-  font-size: 1rem;
-  font-weight: 100;
+  font-size: 1.125rem;
+  font-weight: 300;
 }
 
 h1 {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 h2 {
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
 h3 {
-  font-family: "Shrikhand", cursive;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 em {
@@ -38,14 +39,31 @@ a {
 }
 
 img {
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
+.food-card {
+  width: 100%;
+  height: 69px;
+  padding: 13px;
+  margin-bottom: 1.125rem;
+  flex-direction: row;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.food-card_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .restaurant-card {
   width: 100%;
-  height: 66vw;
-  margin-bottom: 1rem;
+  height: 60vw;
+  margin-bottom: 1.125rem;
 }
 .restaurant-card__content {
   display: flex;
@@ -54,8 +72,11 @@ img {
   width: 100%;
   padding: 13px;
 }
+.restaurant-card__content i {
+  color: linear-gradient(#FF79DA, #9356DC);
+}
 .restaurant-card img {
-  height: 75%;
+  height: 69%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -71,15 +92,15 @@ button {
   filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.2));
   height: 13vw;
   padding: 0px 19px;
-  margin: 30px;
+  margin: 30px 0px;
   border-radius: 25px;
   border: 0px solid black;
   font-size: 1.1rem;
-  font-weight: bold;
+  font-weight: 600;
 }
 button.cta {
   background: linear-gradient(#FF79DA, #9356DC);
-  font-weight: 100;
+  font-weight: 400;
   color: white;
 }
 
@@ -116,7 +137,6 @@ article {
   width: 100%;
 }
 article img {
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -129,6 +149,7 @@ footer {
   color: #fff;
 }
 footer h3 {
+  font-family: "Shrikhand", cursive;
   margin: 1rem 0;
 }
 footer i {
@@ -195,10 +216,14 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 2.5rem;
+  padding: 1.5rem;
+}
+.home__intro h1 {
+  margin: 20px;
 }
 
 .instructions {
+  align-items: start;
   padding: 20px;
 }
 .instructions button:nth-child(4) i {
@@ -215,4 +240,45 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+.menu {
+  border-radius: 30px;
+  position: relative;
+  padding: 1rem;
+  top: -30px;
+  background-color: #F6F6F6;
+}
+.menu_title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+.menu_title h1 {
+  font-family: "Shrikhand", cursive;
+}
+.menu_section {
+  width: 100%;
+}
+.menu_section h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.menu_section h2:after {
+  content: "";
+  height: 5px;
+  width: 40px;
+  border-bottom: 2px solid #99E2D0;
+}
+.menu_section h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.menu p {
+  font-size: 0.9rem;
 }/*# sourceMappingURL=main.css.map */
