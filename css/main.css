@@ -102,9 +102,6 @@ section > h2 {
   color: #9356DC;
   width: 80px;
 }
-.food-card input[type=checkbox]:checked ~ .unchecked {
-  visibility: hidden;
-}
 .food-card:hover {
   cursor: pointer;
 }

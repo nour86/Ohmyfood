@@ -47,8 +47,6 @@
             visibility:visible;
             color:$primary-color;
             width:80px};
-            
-        &:checked~.unchecked{visibility:hidden;};
     }
     &:hover{cursor:pointer;}
     }
