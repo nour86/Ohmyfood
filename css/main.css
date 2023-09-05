@@ -55,9 +55,8 @@ section > h2 {
   margin-bottom: 1.125rem;
   flex-direction: row;
   align-items: flex-end;
-  overflow: hidden;
 }
-.food-card_content {
+.food-card__content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -67,10 +66,10 @@ section > h2 {
   text-overflow: ellipsis;
   width: 100%;
 }
-.food-card_price {
+.food-card__price {
   margin: 13px;
 }
-.food-card .sliding-icon {
+.food-card__sliding-icon {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -82,8 +81,7 @@ section > h2 {
   background-color: #99E2D0;
   width: 80px;
 }
-
-.food-card .checked {
+.food-card__sliding-icon.checked {
   visibility: hidden;
   width: 0px;
 }
@@ -97,13 +95,15 @@ section > h2 {
      -moz-appearance: none;
           appearance: none;
 }
+.food-card input[type=checkbox]:hover {
+  cursor: pointer;
+}
 .food-card input[type=checkbox]:checked ~ .checked {
   visibility: visible;
   color: #9356DC;
   width: 80px;
-}
-.food-card:hover {
-  cursor: pointer;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .restaurant-card {
@@ -159,27 +159,6 @@ button.cta:hover {
   cursor: pointer;
   opacity: 0.66;
   padding-bottom: 4px;
-}
-
-.instructions button {
-  width: 100%;
-  height: 19vw;
-  display: grid;
-  grid-template-columns: 1fr 5fr;
-  align-items: center;
-}
-.instructions button .dot {
-  background: #9356DC;
-  color: #fff;
-  position: absolute;
-  left: -10px;
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
-  display: inline-block;
-}
-.instructions button i {
-  color: grey;
 }
 
 .heart-checkbox .checked {
@@ -305,6 +284,26 @@ main {
 .instructions button:nth-child(4) i {
   color: #9356DC;
 }
+.instructions button {
+  width: 100%;
+  height: 19vw;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+}
+.instructions button .dot {
+  background: #9356DC;
+  color: #fff;
+  position: absolute;
+  left: -10px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.instructions button i {
+  color: grey;
+}
 
 .restaurants {
   margin: 0;
@@ -326,33 +325,33 @@ main {
   top: -30px;
   background-color: #F6F6F6;
 }
-.menu_title {
+.menu__title {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
   margin: 1rem;
 }
-.menu_title h1 {
+.menu__title h1 {
   font-family: "Shrikhand", cursive;
 }
-.menu_section {
+.menu__section {
   width: 100%;
 }
-.menu_section h2 {
+.menu__section h2 {
   font-size: 1rem;
   font-weight: 300;
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
 }
-.menu_section h2:after {
+.menu__section h2:after {
   content: "";
   height: 5px;
   width: 40px;
   border-bottom: 2px solid #99E2D0;
 }
-.menu_section h3 {
+.menu__section h3 {
   font-size: 1.125rem;
   font-weight: 500;
 }

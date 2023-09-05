@@ -1,13 +1,12 @@
 .food-card {
+
     width:100%;
     height: 69px;
     padding:0px;
     margin-bottom: 1.125rem;
     flex-direction: row;
     align-items:flex-end;
-    overflow:hidden;
-
-    &_content {
+    &__content {
         display:flex;
         flex-direction: column;
         justify-content: space-between;
@@ -17,24 +16,19 @@
         text-overflow:ellipsis;
         width: 100%;
     }
-    &_price {
+    &__price {
         margin:13px;
     }
-    & .sliding-icon {
+    &__sliding-icon {
             @include flexCenter(column);
             @include transition-ease;
             height:100%;
             background-color: $tertiary-color;
             width: 80px;
+            &.checked {
+                    visibility:hidden;
+                    width:0px;}
         }
-}
-
-
-.food-card {
-
-    .checked {
-        visibility:hidden;
-        width:0px;}
 
     input[type="checkbox"]{
         position:absolute;
@@ -43,10 +37,18 @@
         width: 100%;
         height: 100%;
         appearance: none;
-        &:checked~.checked{
+
+        &:hover{
+            cursor:pointer;
+        }
+
+        &:checked~.checked {
             visibility:visible;
             color:$primary-color;
-            width:80px};
-    }
-    &:hover{cursor:pointer;}
-    }
+            width:80px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        };
+        }
+
+}
