@@ -20,7 +20,7 @@
 
 <body>
     <header>
-        <i class="fa-solid fa-arrow-left"><a href="index.html"></i>
+        <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
         <img src="img/logo/ohmyfood.png" alt="logo">
     </header>
 
@@ -37,8 +37,8 @@
 
                 <h1>Réservez le menu qui <br> vous convient</h1>
                 <p>Découvrez des <em>restaurants</em> d'exception, <em>sélectionnés</em> par nos soins.</p>
-                <button onclick="location.href='#restaurants'" type="button" class="cta">Explorez nos restaurants</button>
-
+                
+                <button type="button" class="cta">Explorez nos restaurants</button>
             </div>
             
         </section>
@@ -46,11 +46,9 @@
         <section class="instructions"> 
 
                 <h2>Fonctionnement</h2>
-
-                <button type="button"><span class="dot">1</span><i class="fa-solid fa-mobile-screen-button""></i>Choisissez un restaurant</button>
-                <button type="button"><span class="dot">2</span><i class="fa-solid fa-list-ul"></i>Composez votre menu</button>
+                <button type="button"><span class="dot">1</span><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</button>
+                <button type="button"><span class="dot">2</span><i class="fa-solid fa-list-ul"></i>Composez votre menu</div>
                 <button type="button"><span class="dot">3</span><i class="fa-solid fa-store"></i>Dégustez au restaurant</button>
-
         </section>
 
 
@@ -61,7 +59,7 @@
 
                 
                     <article class="restaurant-card">
-                            <a href="restaurants/la_palette_du_gout.html"></a>
+                            <!-- <a href="restaurants/la_palette_du_gout.html"></a> -->
                             <img src="img/restaurants/La_palette_du_gout.jpg" alt="photo d'une assiette">
 
                             <div class="restaurant-card__content">
@@ -69,7 +67,9 @@
                                     <h2>La palette du gout</h2>
                                     <p>Ménilmontant</p>
                                 </div>
-                                <i class="fa-solid fa-heart"></i>
+                                <div>
+                                <input type="checkbox" checked><i class="fa-solid fa-heart"></i>
+                                </div>
                             </div>
                     </article>
 

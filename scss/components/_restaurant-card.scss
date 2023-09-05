@@ -9,7 +9,10 @@
         justify-content: space-between;
         width: 100%;
         padding: 13px;
-        & i {color: linear-gradient($secondary-color, $primary-color);}
+        & i {color: $secondary-color;
+            
+        } // checkbox pour changer la couleur du coeur
+        & input[type="checkbox"] :checked ~ i {color:$primary-color};
     }
 
     img {

@@ -18,7 +18,7 @@
         h2 {
             font-size: 1rem;
             font-weight: 300;
-            @include stroke-underline;
+            @include stroke-underline($tertiary-color);
             margin-bottom: 1rem;
         }
 
