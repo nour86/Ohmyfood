@@ -2,6 +2,8 @@
 
 // section acceuil
 
+
+
 .home {
     
     background-color: $primary-bg-color ;
@@ -12,7 +14,7 @@
         align-items: center;
         height: 50px;
         width: 100%;
-        background: linear-gradient(0deg,$secondary--bg-color 95%, lightgrey 100%);
+        background: linear-gradient(0deg,$secondary-bg-color 95%, lightgrey 100%);
         i { margin-right: 1rem;}
     }
     &__intro {
@@ -41,6 +43,7 @@
     margin:0;
     padding:20px;
     border-radius: 20px;
+    align-items: start;
     background-color: $primary-bg-color;
     &__grid {
         display:flex;
