@@ -1,31 +1,42 @@
 
-
-button {
+@mixin buttonshape {
     @include box-shadow;
-    height: 13vw;
-    padding:0px 19px;
-    margin: 15px 0px;
+    border:0px;
     border-radius: 25px;
-    border: 0px solid black;
-    font-size: 1.1rem;
-    font-weight: 600;
-    &.cta {
-        @include transition-ease;
-        @include hover-lighten;
-        margin: 30px 0px;
-        background:
-        linear-gradient($secondary-color, $primary-color);
-        font-weight: 400;
-        color:white;
-          }
-    }
+    height:72px;
+    margin: 15px 0px;
+    padding:0px 19px;
+    display: grid;
+    align-items:center;
+    @content;
+}
 
-    .heart-checkbox {
-    .checked {display:none;}
+    
+.cta {
+    @include buttonshape{
+        font-size: 1.1rem;
+        font-weight: 600;
+        height: 50px;
+    };
+    @include transition-ease;
+    @include hover-lighten;
+    margin: 30px 0px;
+    background:
+    linear-gradient($secondary-color, $primary-color);
+    font-weight: 400;
+    color:white;
+}
+
+.heart-checkbox {
+    .checked {
+        display:none;
+    }
     input[type="checkbox"]{
         appearance: none;
         &:checked~.checked{display:inline-block; color:$primary-color;};
         &:checked~.unchecked{display:none;};
     }
-    &:hover{cursor:pointer;}
+    &:hover{
+        cursor:pointer;
+    }
 }

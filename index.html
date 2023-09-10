@@ -26,31 +26,24 @@
 
     <main>
 
-        <section class="home">
+        <div class="location">
+            <i class="fas fa-location-dot fa-lg icon"></i>
+            <p>Paris, Belleville</p>
+        </div>
 
-            <div class="home__localisation">
-                <i class="fas fa-location-dot fa-lg icon"></i>
-                <p>Paris, Belleville</p>
-            </div>
-
-            <div class="home__intro">
-
+            <section class="intro">
                 <h1>Réservez le menu qui <br> vous convient</h1>
                 <p>Découvrez des <em>restaurants</em> d'exception, <em>sélectionnés</em> par nos soins.</p>
-                
                 <button type="button" onclick="window.location.href='#restaurants'" class="cta"><span>Explorez nos restaurants</span></button>
-            </div>
+            </section>
             
+            <section class="instructions"> 
+                    <h2>Fonctionnement</h2>
+                    <div class="instructions__button"><span class="dot">1</span><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</div>
+                    <div class="instructions__button"><span class="dot">2</span><i class="fa-solid fa-list-ul"></i>Composez votre menu</div>
+                    <div class="instructions__button"><span class="dot">3</span><i class="fa-solid fa-store"></i>Dégustez au restaurant</div>
+            </section>
         </section>
-
-        <section class="instructions"> 
-
-                <h2>Fonctionnement</h2>
-                <button type="button"><span class="dot">1</span><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</button>
-                <button type="button"><span class="dot">2</span><i class="fa-solid fa-list-ul"></i>Composez votre menu</button>
-                <button type="button"><span class="dot">3</span><i class="fa-solid fa-store"></i>Dégustez au restaurant</button>
-        </section>
-
 
         <section class="restaurants" id="restaurants">
             <h2>Restaurants</h2>
@@ -63,14 +56,15 @@
                         <img src="img/restaurants/La_palette_du_gout.jpg" alt="photo d'une assiette">
 
                         <div class="restaurant-card__content">
+                            <div class="restaurant-card__title"></div>
                                 <h2>La palette du gout</h2>
                                 <p>Ménilmontant</p>
                         </div>
-                        <label class="heart-checkbox">
+                        <div class="heart-checkbox">
                             <input type="checkbox">
                             <i class="fa-solid fa-heart checked"></i>
                             <i class="fa-regular fa-heart unchecked"></i>
-                        </label>
+                        </div>
                     </article>
 
                     <article class="restaurant-card">
