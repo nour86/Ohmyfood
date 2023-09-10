@@ -108,11 +108,21 @@ img {
   margin-bottom: 1.125rem;
 }
 .restaurant-card__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
   padding: 13px;
+  display: grid;
+  height: 31%;
+  align-items: center;
+  grid-template-areas: "h2 label" "p label";
+  grid-template-columns: 1fr 30px;
+}
+.restaurant-card__content h2 {
+  grid-area: h2;
+}
+.restaurant-card__content label {
+  grid-area: label;
+}
+.restaurant-card__content p {
+  grid-area: p;
 }
 .restaurant-card img {
   height: 69%;
@@ -121,6 +131,7 @@ img {
 }
 .restaurant-card a {
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -153,6 +164,10 @@ img {
   padding-bottom: 4px;
 }
 
+.heart-checkbox {
+  position: relative;
+  z-index: 2;
+}
 .heart-checkbox .checked {
   display: none;
 }

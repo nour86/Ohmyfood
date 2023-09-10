@@ -4,11 +4,17 @@
     margin-bottom: 1.125rem;
 
     &__content {
-        display:flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 100%;
-        padding: 13px;
+        padding:13px;
+        display:grid;
+        height: 31%;
+        align-items: center;
+        grid-template-areas:
+        "h2 label"
+        "p label";
+        grid-template-columns: 1fr 30px;
+        h2{grid-area:h2;}
+        label{grid-area:label;}
+        p{grid-area:p;}
     }
 
     img {
@@ -19,12 +25,11 @@
 
     a {
         position :absolute;
+        z-index: 1;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
     }
-
-
 }
 
