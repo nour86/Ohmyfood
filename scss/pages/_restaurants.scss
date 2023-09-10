@@ -13,13 +13,18 @@
         margin:1rem;
         h1 {font-family:'Shrikhand', cursive;}
     }
-    &__section {
+    &__content {
+        display:flex;
+        flex-direction: column;
         width: 100%;
+
         h2 {
+            text-align: left;
             font-size: 1rem;
             font-weight: 300;
             @include stroke-underline($tertiary-color);
             margin-bottom: 1rem;
+
         }
 
         h3{
@@ -30,5 +35,15 @@
         p {
             font-size: 0.9rem;
         }
+
+        .cta {
+            order:1;
+            align-self:center;
+            width: 50%;
+            &:active~ .food-card {border:2px solid $tertiary-color};
+        }
+
+        
+
 
 }   

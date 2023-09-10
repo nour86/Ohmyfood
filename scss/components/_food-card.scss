@@ -6,6 +6,7 @@
     margin-bottom: 1.125rem;
     flex-direction: row;
     align-items:flex-end;
+    overflow: hidden;
     &__content {
         display:flex;
         flex-direction: column;
@@ -18,16 +19,16 @@
     }
     &__price {
         margin:13px;
+        font-weight: bolder;
     }
-    &__sliding-icon {
+    & .checked {
             @include flexCenter(column);
             @include transition-ease;
             height:100%;
             background-color: $tertiary-color;
-            width: 80px;
-            &.checked {
-                    visibility:hidden;
-                    width:0px;}
+            color:white;
+            opacity:0;
+            width:0px;
     }
 
     input[type="checkbox"]{
@@ -43,11 +44,9 @@
         }
 
         &:checked~.checked {
-            visibility:visible;
-            color:$primary-color;
+            opacity:1;
             width:80px;
-            border-top-right-radius: 20px;
-            border-bottom-right-radius: 20px;
+
         };
     }
 

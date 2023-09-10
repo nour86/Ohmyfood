@@ -51,6 +51,7 @@ img {
   margin-bottom: 1.125rem;
   flex-direction: row;
   align-items: flex-end;
+  overflow: hidden;
 }
 .food-card__content {
   display: flex;
@@ -64,8 +65,9 @@ img {
 }
 .food-card__price {
   margin: 13px;
+  font-weight: bolder;
 }
-.food-card__sliding-icon {
+.food-card .checked {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,10 +77,8 @@ img {
   -webkit-transition: all 0.25s ease-in-out;
   height: 100%;
   background-color: #99E2D0;
-  width: 80px;
-}
-.food-card__sliding-icon.checked {
-  visibility: hidden;
+  color: white;
+  opacity: 0;
   width: 0px;
 }
 .food-card input[type=checkbox] {
@@ -95,11 +95,8 @@ img {
   cursor: pointer;
 }
 .food-card input[type=checkbox]:checked ~ .checked {
-  visibility: visible;
-  color: #9356DC;
+  opacity: 1;
   width: 80px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
 }
 
 .restaurant-card, .restaurant-card--new {
@@ -367,26 +364,37 @@ main {
 .menu__title h1 {
   font-family: "Shrikhand", cursive;
 }
-.menu__section {
+.menu__content {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
-.menu__section h2 {
+.menu__content h2 {
+  text-align: left;
   font-size: 1rem;
   font-weight: 300;
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
 }
-.menu__section h2:after {
+.menu__content h2:after {
   content: "";
   height: 5px;
   width: 40px;
   border-bottom: 2px solid #99E2D0;
 }
-.menu__section h3 {
+.menu__content h3 {
   font-size: 1.125rem;
   font-weight: 500;
 }
 .menu p {
   font-size: 0.9rem;
+}
+.menu .cta {
+  order: 1;
+  align-self: center;
+  width: 50%;
+}
+.menu .cta:active ~ .food-card {
+  border: 2px solid #99E2D0;
 }/*# sourceMappingURL=main.css.map */
