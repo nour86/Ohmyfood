@@ -102,7 +102,7 @@ img {
   border-bottom-right-radius: 20px;
 }
 
-.restaurant-card {
+.restaurant-card, .new-restaurant-card {
   width: 100%;
   height: 60vw;
   margin-bottom: 1.125rem;
@@ -110,7 +110,6 @@ img {
 .restaurant-card__content {
   padding: 13px;
   display: grid;
-  height: 31%;
   align-items: center;
   grid-template-areas: "h2 label" "p label";
   grid-template-columns: 1fr 30px;
@@ -124,18 +123,32 @@ img {
 .restaurant-card__content p {
   grid-area: p;
 }
-.restaurant-card img {
+.restaurant-card img, .new-restaurant-card img {
+  position: relative;
   height: 69%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-.restaurant-card a {
+.restaurant-card a, .new-restaurant-card a {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.new-restaurant-card h2::before {
+  content: "nouveau";
+  padding: 5px 10px;
+  border-radius: 2px;
+  background-color: #99E2D0;
+  color: #1b6150;
+  z-index: 1;
+  position: absolute;
+  font-size: 14px;
+  top: 20px;
+  right: 20px;
 }
 
 .cta {
@@ -166,7 +179,7 @@ img {
 
 .heart-checkbox {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 .heart-checkbox .checked {
   display: none;

@@ -1,3 +1,12 @@
+@mixin tagbox {
+        padding:5px 10px;
+        border-radius: 2px;
+        background-color: $tertiary-color;
+        color:darken($tertiary-color,50%);
+        z-index: 1;
+}
+
+
 .restaurant-card {
     width:100%;
     height: 60vw;
@@ -6,7 +15,6 @@
     &__content {
         padding:13px;
         display:grid;
-        height: 31%;
         align-items: center;
         grid-template-areas:
         "h2 label"
@@ -16,16 +24,15 @@
         label{grid-area:label;}
         p{grid-area:p;}
     }
-
     img {
+        position:relative;
         height:69%;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
-    }
-
+    } 
     a {
         position :absolute;
-        z-index: 1;
+        z-index: 2;
         top: 0;
         left: 0;
         width: 100%;
@@ -33,3 +40,14 @@
     }
 }
 
+.new-restaurant-card{
+    @extend .restaurant-card;
+    h2::before {
+        content:'nouveau';
+        @include tagbox;
+        position: absolute;
+        font-size: 14px;
+        top:20px;
+        right:20px;
+    }
+}
