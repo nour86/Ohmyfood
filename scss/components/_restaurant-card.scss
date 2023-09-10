@@ -40,7 +40,7 @@
     }
 }
 
-.new-restaurant-card{
+.restaurant-card--new{
     @extend .restaurant-card;
     h2::before {
         content:'nouveau';

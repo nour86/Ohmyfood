@@ -57,8 +57,8 @@ img {
   flex-direction: column;
   justify-content: space-between;
   margin: 13px;
-  overflow: hidden;
   white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;
 }
@@ -102,7 +102,7 @@ img {
   border-bottom-right-radius: 20px;
 }
 
-.restaurant-card, .new-restaurant-card {
+.restaurant-card, .restaurant-card--new {
   width: 100%;
   height: 60vw;
   margin-bottom: 1.125rem;
@@ -123,13 +123,13 @@ img {
 .restaurant-card__content p {
   grid-area: p;
 }
-.restaurant-card img, .new-restaurant-card img {
+.restaurant-card img, .restaurant-card--new img {
   position: relative;
   height: 69%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-.restaurant-card a, .new-restaurant-card a {
+.restaurant-card a, .restaurant-card--new a {
   position: absolute;
   z-index: 2;
   top: 0;
@@ -138,7 +138,7 @@ img {
   height: 100%;
 }
 
-.new-restaurant-card h2::before {
+.restaurant-card--new h2::before {
   content: "nouveau";
   padding: 5px 10px;
   border-radius: 2px;
