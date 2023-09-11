@@ -4,31 +4,45 @@
     height: 69px;
     padding:0px;
     margin-bottom: 1.125rem;
+    display:flex;
     flex-direction: row;
-    align-items:flex-end;
+    justify-content: space-between;
+    align-items:center;
     overflow: hidden;
     &__content {
-        display:flex;
+        display: flex;
         flex-direction: column;
-        justify-content: space-between;
         margin:13px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow:ellipsis;
-        width: 100%;
     }
     &__price {
-        margin:13px;
+        position:relative;
+        flex-shrink: 0;
+        width: 100px;
+        left:51px;
+        @include flexCenter(row);
         font-weight: bolder;
-    }
-    & .checked {
-            @include flexCenter(column);
-            @include transition-ease;
-            height:100%;
+        & span {
+            @include flexCenter(row);
+            background-color: white;
+            color:black;
+            width:50%;
+        }
+        & i {
+            @include flexCenter(row);
             background-color: $tertiary-color;
             color:white;
-            opacity:0;
-            width:0px;
+            height: 100%;
+            width: 50px;
+        }
+
+    }
+    & .checked {
+            @include transition-ease;
+            height:100%;
+            color:white;
     }
 
     input[type="checkbox"]{
@@ -37,6 +51,7 @@
         right: 0;
         width: 100%;
         height: 100%;
+        z-index: 1;
         appearance: none;
 
         &:hover{
@@ -44,10 +59,8 @@
         }
 
         &:checked~.checked {
-            opacity:1;
-            width:80px;
+            transform:translateX(-50px);
+            }
 
-        };
-    }
-
+    };
 }

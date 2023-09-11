@@ -30,13 +30,23 @@
 .heart-checkbox {
     position:relative;
     z-index: 3;
+    & i {position:absolute;
+        top:0;
+        left:-20px;}
     .checked {
-        display:none;
+        opacity:0;
     }
     input[type="checkbox"]{
         appearance: none;
-        &:checked~.checked{display:inline-block; color:$primary-color;};
-        &:checked~.unchecked{display:none;}
+        &:checked~.checked{
+            @include transition-ease;
+            opacity:1;
+            color:$primary-color;
+        }
+        &:checked~.unchecked{
+            @include transition-ease;
+            opacity:0;
+        }
     }
     &:hover{
         cursor:pointer;
