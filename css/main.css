@@ -196,16 +196,12 @@ img {
 .cta:hover {
   cursor: pointer;
   opacity: 0.66;
-  padding-bottom: 4px;
 }
 
 .heart-checkbox {
   position: relative;
   width: 30px;
   z-index: 3;
-}
-.heart-checkbox i {
-  position: absolute;
 }
 .heart-checkbox img {
   position: absolute;
@@ -220,6 +216,7 @@ img {
   transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
+  color: red;
   opacity: 1;
 }
 .heart-checkbox input[type=checkbox]:not(:checked) ~ .checked {
@@ -302,6 +299,7 @@ section > h1, section > h2 {
 body {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   margin: 0;
   width: 100%;
   max-width: 1440px;
@@ -346,7 +344,7 @@ main {
   align-items: center;
   width: 100%;
   font-size: 1.2rem;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 3fr;
   justify-items: left;
   background-color: #EAEAEA;
 }
@@ -372,7 +370,6 @@ main {
 }
 
 .restaurants {
-  border-radius: 20px;
   align-items: start;
   background-color: #F6F6F6;
 }
@@ -383,7 +380,8 @@ main {
 }
 
 .menu {
-  border-radius: 30px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
   position: relative;
   padding: 1rem;
   top: -30px;
