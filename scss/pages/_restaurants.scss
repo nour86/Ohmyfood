@@ -12,35 +12,40 @@
         align-items: center;
         margin:1rem;
         h1 {font-family:'Shrikhand', cursive;}
+        // i {left:-20px;}
     }
     &__content {
         display:flex;
         flex-direction: column;
         width: 100%;
-
         h2 {
             text-align: left;
             font-size: 1rem;
             font-weight: 300;
             @include stroke-underline($tertiary-color);
             margin-bottom: 1rem;
-
         }
+    }
 
-        h3{
-            font-size: 1.125rem;
-            font-weight:500;}
-        }
-
-        p {
-            font-size: 0.9rem;
-        }
+    & article::before  {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border:2px solid $tertiary-color;
+        background-color: aqua;
+        opacity:0;
+        transition: 0.25s ease-in-out;
+    }    
 
         .cta {
             order:1;
             align-self:center;
             width: 50%;
-            &:active~ .food-card {border:2px solid $tertiary-color};
+            &:active~ article::before {opacity:0.1;};
         }
 
         

@@ -19,12 +19,12 @@
         grid-template-areas:
         "h2 label"
         "p label";
-        grid-template-columns: 1fr 30px;
-        h2{grid-area:h2;}
-        label{grid-area:label;}
-        p{grid-area:p;}
+        grid-template-columns: 1fr 50px;
+        & h2{grid-area:h2;}
+        & label{grid-area:label;}
+        & p{grid-area:p;}
     }
-    img {
+    > img {
         position:relative;
         height:69%;
         border-top-left-radius: 20px;

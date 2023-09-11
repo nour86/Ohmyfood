@@ -45,7 +45,6 @@ img {
 }
 
 .food-card {
-  width: 100%;
   height: 69px;
   padding: 0px;
   margin-bottom: 1.125rem;
@@ -54,6 +53,13 @@ img {
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
+}
+.food-card h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.food-card p {
+  font-size: 0.9rem;
 }
 .food-card__content {
   display: flex;
@@ -65,9 +71,9 @@ img {
 }
 .food-card__price {
   position: relative;
+  padding: 0;
   flex-shrink: 0;
-  width: 100px;
-  left: 51px;
+  width: 25%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -79,8 +85,9 @@ img {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: white;
   color: black;
+  position: relative;
+  top: 1rem;
   width: 50%;
 }
 .food-card__price i {
@@ -91,12 +98,11 @@ img {
   background-color: #99E2D0;
   color: white;
   height: 100%;
-  width: 50px;
+  width: 50%;
 }
 .food-card .checked {
-  transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -webkit-transition: all 0.25s ease-in-out;
+  transform: translate(50%);
+  transition: all 250ms ease-in-out;
   height: 100%;
   color: white;
 }
@@ -115,7 +121,7 @@ img {
   cursor: pointer;
 }
 .food-card input[type=checkbox]:checked ~ .checked {
-  transform: translateX(-50px);
+  transform: translateX(0);
 }
 
 .restaurant-card, .restaurant-card--new {
@@ -128,7 +134,7 @@ img {
   display: grid;
   align-items: center;
   grid-template-areas: "h2 label" "p label";
-  grid-template-columns: 1fr 30px;
+  grid-template-columns: 1fr 50px;
 }
 .restaurant-card__content h2 {
   grid-area: h2;
@@ -139,7 +145,7 @@ img {
 .restaurant-card__content p {
   grid-area: p;
 }
-.restaurant-card img, .restaurant-card--new img {
+.restaurant-card > img, .restaurant-card--new > img {
   position: relative;
   height: 69%;
   border-top-left-radius: 20px;
@@ -195,15 +201,15 @@ img {
 
 .heart-checkbox {
   position: relative;
+  width: 30px;
   z-index: 3;
 }
 .heart-checkbox i {
   position: absolute;
-  top: 0;
-  left: -20px;
 }
-.heart-checkbox .checked {
-  opacity: 0;
+.heart-checkbox img {
+  position: absolute;
+  top: -5px;
 }
 .heart-checkbox input[type=checkbox] {
   -webkit-appearance: none;
@@ -215,9 +221,8 @@ img {
   -moz-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   opacity: 1;
-  color: #9356DC;
 }
-.heart-checkbox input[type=checkbox]:checked ~ .unchecked {
+.heart-checkbox input[type=checkbox]:not(:checked) ~ .checked {
   transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -413,18 +418,24 @@ main {
   width: 40px;
   border-bottom: 2px solid #99E2D0;
 }
-.menu__content h3 {
-  font-size: 1.125rem;
-  font-weight: 500;
-}
-.menu p {
-  font-size: 0.9rem;
+.menu article::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #99E2D0;
+  background-color: aqua;
+  opacity: 0;
+  transition: 0.25s ease-in-out;
 }
 .menu .cta {
   order: 1;
   align-self: center;
   width: 50%;
 }
-.menu .cta:active ~ .food-card {
-  border: 2px solid #99E2D0;
+.menu .cta:active ~ article::before {
+  opacity: 0.1;
 }/*# sourceMappingURL=main.css.map */
