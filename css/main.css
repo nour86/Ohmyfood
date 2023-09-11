@@ -62,7 +62,7 @@ img {
     opacity: 1;
   }
 }
-.food-card {
+.foodcard {
   height: 69px;
   padding: 0px;
   margin-bottom: 1.125rem;
@@ -72,14 +72,14 @@ img {
   align-items: center;
   overflow: hidden;
 }
-.food-card h3 {
+.foodcard h3 {
   font-size: 1.125rem;
   font-weight: 500;
 }
-.food-card p {
+.foodcard p {
   font-size: 0.9rem;
 }
-.food-card__content {
+.foodcard__content {
   display: flex;
   flex-direction: column;
   margin: 13px;
@@ -87,7 +87,7 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.food-card__price {
+.foodcard__price {
   position: relative;
   padding: 0;
   flex-shrink: 0;
@@ -98,7 +98,7 @@ img {
   align-items: center;
   font-weight: bolder;
 }
-.food-card__price span {
+.foodcard__price span {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -108,7 +108,7 @@ img {
   top: 1rem;
   width: 50%;
 }
-.food-card__price i {
+.foodcard__price i {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -118,13 +118,13 @@ img {
   height: 100%;
   width: 50%;
 }
-.food-card .checked {
-  transform: translate(50%);
+.foodcard > .checked {
+  transform: translateX(50%);
   transition: all 250ms ease-in-out;
   height: 100%;
   color: white;
 }
-.food-card input[type=checkbox] {
+.foodcard input[type=checkbox] {
   position: absolute;
   top: 0;
   right: 0;
@@ -135,10 +135,10 @@ img {
      -moz-appearance: none;
           appearance: none;
 }
-.food-card input[type=checkbox]:hover {
+.foodcard input[type=checkbox]:hover {
   cursor: pointer;
 }
-.food-card input[type=checkbox]:checked ~ .checked {
+.foodcard input[type=checkbox]:checked ~ .checked {
   transform: translateX(0);
 }
 
@@ -434,34 +434,37 @@ main {
   width: 40px;
   border-bottom: 2px solid #99E2D0;
 }
-.menu .food-card {
+.menu .foodcard {
   animation: menu-opening 500ms both ease-in-out;
 }
-.menu .food-card .menu:nth-child(1) {
-  animation-delay: 250ms;
+.menu .foodcard--1 {
+  animation-delay: 100ms;
 }
-.menu .food-card .menu:nth-child(2) {
+.menu .foodcard--2 {
+  animation-delay: 200ms;
+}
+.menu .foodcard--3 {
+  animation-delay: 300ms;
+}
+.menu .foodcard--4 {
+  animation-delay: 400ms;
+}
+.menu .foodcard--5 {
   animation-delay: 500ms;
 }
-.menu .food-card .menu:nth-child(3) {
-  animation-delay: 750ms;
+.menu .foodcard--6 {
+  animation-delay: 600ms;
 }
-.menu .food-card .menu:nth-child(4) {
-  animation-delay: 1000ms;
+.menu .foodcard--7 {
+  animation-delay: 700ms;
 }
-.menu .food-card .menu:nth-child(5) {
-  animation-delay: 1250ms;
+.menu .foodcard--8 {
+  animation-delay: 800ms;
 }
-.menu .food-card .menu:nth-child(6) {
-  animation-delay: 1500ms;
+.menu .foodcard--9 {
+  animation-delay: 900ms;
 }
-.menu .food-card .menu:nth-child(7) {
-  animation-delay: 1750ms;
-}
-.menu .food-card .menu:nth-child(8) {
-  animation-delay: 2000ms;
-}
-.menu .food-card::before {
+.menu .foodcard::before {
   content: "";
   position: absolute;
   top: 0;

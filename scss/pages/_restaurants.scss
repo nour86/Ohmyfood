@@ -28,13 +28,13 @@
         }
     }
 
-    & .food-card {
+    & .foodcard {
         
         animation: menu-opening $anim-dur both ease-in-out;
 
-        @for $i from 1 through 8 {
-            & .menu:nth-child(#{$i}){
-                animation-delay: $anim-delay * $i;
+        @for $i from 1 through 9 {
+            &--#{$i}{
+                animation-delay: 100ms* $i;
             }
         }
 

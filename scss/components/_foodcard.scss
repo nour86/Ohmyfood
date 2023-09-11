@@ -1,4 +1,4 @@
-.food-card {
+.foodcard {
     height: 69px;
     padding:0px;
     margin-bottom: 1.125rem;
@@ -45,8 +45,8 @@
         }
 
     }
-    & .checked {
-            transform:translate(50%);
+    & > .checked {
+            transform:translateX(50%);
             transition: all 250ms ease-in-out;
             height:100%;
             color:white;
