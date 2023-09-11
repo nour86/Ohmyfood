@@ -28,28 +28,28 @@
         }
     }
 
-    & article::before  {
-        content: ' ';
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
+    & .food-card {
+        
+        animation: menu-opening $anim-dur both ease-in-out;
+
+        @for $i from 1 through 8 {
+            & .menu:nth-child(#{$i}){
+                animation-delay: $anim-delay * $i;
+            }
+        }
+
+        &::before{
+        @include pseudo-elem;
         border:2px solid $tertiary-color;
         background-color: aqua;
         opacity:0;
         transition: 0.25s ease-in-out;
-    }    
-
+        }    
+    }
         .cta {
             order:1;
             align-self:center;
             width: 50%;
             &:active~ article::before {opacity:0.1;};
         }
-
-        
-
-
 }   

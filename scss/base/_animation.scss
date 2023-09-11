@@ -1,0 +1,22 @@
+$anim-dur:500ms;
+$anim-delay:250ms;
+
+@keyframes menu-opening {
+0%{
+    transform:translateX(9999px);
+    opacity:0;
+}
+80%{
+    transform:translateX(-10px);
+    opacity:0.6;
+}
+90%{
+    transform:translateX(10px);
+    opacity:0.8;
+}
+
+100%{
+    transform:translateX(0px);
+    opacity:1;
+}
+}

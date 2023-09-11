@@ -44,6 +44,24 @@ img {
      object-fit: cover;
 }
 
+@keyframes menu-opening {
+  0% {
+    transform: translateX(9999px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(-10px);
+    opacity: 0.6;
+  }
+  90% {
+    transform: translateX(10px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
 .food-card {
   height: 69px;
   padding: 0px;
@@ -416,14 +434,40 @@ main {
   width: 40px;
   border-bottom: 2px solid #99E2D0;
 }
-.menu article::before {
-  content: " ";
-  display: block;
+.menu .food-card {
+  animation: menu-opening 500ms both ease-in-out;
+}
+.menu .food-card .menu:nth-child(1) {
+  animation-delay: 250ms;
+}
+.menu .food-card .menu:nth-child(2) {
+  animation-delay: 500ms;
+}
+.menu .food-card .menu:nth-child(3) {
+  animation-delay: 750ms;
+}
+.menu .food-card .menu:nth-child(4) {
+  animation-delay: 1000ms;
+}
+.menu .food-card .menu:nth-child(5) {
+  animation-delay: 1250ms;
+}
+.menu .food-card .menu:nth-child(6) {
+  animation-delay: 1500ms;
+}
+.menu .food-card .menu:nth-child(7) {
+  animation-delay: 1750ms;
+}
+.menu .food-card .menu:nth-child(8) {
+  animation-delay: 2000ms;
+}
+.menu .food-card::before {
+  content: "";
   position: absolute;
-  left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
   border: 2px solid #99E2D0;
   background-color: aqua;
   opacity: 0;
