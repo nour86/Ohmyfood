@@ -21,6 +21,10 @@
     align-items: start;
     padding:20px;
     background-color: white;
+    &__grid{
+        @include flexCenter(column);
+        width: 100%;
+    }
     &__button {
         @include box-shadow;
         @include buttonshape {
@@ -44,12 +48,6 @@
         i {color:$primary-color;}
     }
 
-    //media querries
-
-    @include lg {
-        flex-direction: row;
-        justify-content: space-between;
-    }
 }
 
 // section restaurants 
@@ -65,3 +63,20 @@
 }
 
 
+//media querries
+
+@include lg {
+    .instructions{
+        &__grid{
+            flex-direction: row;
+            justify-content: space-evenly;
+            gap:2rem;
+        }
+    }
+    .restaurants{
+        &__grid{
+            
+
+        }
+    }
+}
