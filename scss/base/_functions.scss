@@ -49,6 +49,15 @@
   left: 0;
 }
 
+@mixin rounded-dot($color) {
+  @include flexCenter (column);
+  background: $color;
+  color: set-text-color($color);
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+}
+
 @mixin stroke-underline ($color) {
   display:flex;
   flex-direction: column;
