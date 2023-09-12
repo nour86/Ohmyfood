@@ -56,7 +56,7 @@ $anim-delay:250ms;
 
 @keyframes slide-up {
     0%{
-        transform:scaleY(50px);
+        transform:scaleY(1);
         opacity: 1;
     }
     80%{

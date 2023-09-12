@@ -5,15 +5,9 @@
 
     &__content {
         padding:13px;
-        display:grid;
-        align-items: center;
-        grid-template-areas:
-        "h2 label"
-        "p label";
-        grid-template-columns: 1fr 50px;
-        & h2{grid-area:h2;}
-        & label{grid-area:label;}
-        & p{grid-area:p;}
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
     > img {
         position:relative;
