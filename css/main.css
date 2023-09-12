@@ -422,8 +422,28 @@ main {
   width: 40px;
   border-bottom: 2px solid #99E2D0;
 }
+.menu .cta {
+  order: 1;
+  align-self: center;
+  width: 50%;
+}
+.menu .cta:active ~ .foodcard::before {
+  opacity: 0.1;
+}
 .menu .foodcard {
   animation: menu-opening 500ms both ease-in-out;
+}
+.menu .foodcard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 2px solid #99E2D0;
+  background-color: aqua;
+  opacity: 0;
+  transition: 0.25s ease-in-out;
 }
 .menu .foodcard--1 {
   animation-delay: 100ms;
@@ -451,24 +471,4 @@ main {
 }
 .menu .foodcard--9 {
   animation-delay: 900ms;
-}
-.menu .foodcard::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border: 2px solid #99E2D0;
-  background-color: aqua;
-  opacity: 0;
-  transition: 0.25s ease-in-out;
-}
-.menu .cta {
-  order: 1;
-  align-self: center;
-  width: 50%;
-}
-.menu .cta:active ~ .foodcard::before {
-  opacity: 0.1;
 }/*# sourceMappingURL=main.css.map */

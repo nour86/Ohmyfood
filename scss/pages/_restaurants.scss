@@ -24,31 +24,34 @@
             text-align: left;
             font-size: 1rem;
             font-weight: 300;
-            @include stroke-underline($tertiary-color);
+            @include stroke-underline($tertiary-color); // pseudo element pour trait vert en dessous
             margin-bottom: 1rem;
         }
     }
+    .cta {
+        order:1; // pour que le boutton s'affiche en bas...
+        align-self:center;
+        width: 50%;
+        &:active~ .foodcard::before {opacity:0.1;};
+    }
 
-    & .foodcard {
-        
-        animation: menu-opening $anim-dur both ease-in-out;
-        @for $i from 1 through 9 {
-            &--#{$i}{
-                animation-delay: 100ms* $i;
-            }
-        }
+ 
+
+    & .foodcard{
+        //pseudo element pour effet quand boutton cta active
         &::before{
             @include pseudo-elem;
             border:2px solid $tertiary-color;
             background-color: aqua;
             opacity:0;
             transition: 0.25s ease-in-out;
-        }    
-    }
-    .cta {
-        order:1;
-        align-self:center;
-        width: 50%;
-        &:active~ .foodcard::before {opacity:0.1;};
+        }
+           //animation//
+        animation: menu-opening $anim-dur both ease-in-out;
+        @for $i from 1 through 9 {
+            &--#{$i}{
+                animation-delay: 100ms* $i; // cartes apparraissent avec un délai de 100ms entre elles
+            }
+        }
     }
 }   
