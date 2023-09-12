@@ -208,7 +208,8 @@ img {
 
 .heartbox {
   position: relative;
-  width: 20px;
+  margin: 1rem;
+  width: 1.25rem;
   -o-object-fit: contain;
      object-fit: contain;
   z-index: 1;
@@ -364,8 +365,8 @@ main {
   align-items: center;
   background: #9356DC;
   color: #fff;
-  height: 25px;
-  width: 25px;
+  height: 1.5rem;
+  width: 1.5rem;
   border-radius: 50%;
   position: absolute;
   left: -10px;
@@ -468,6 +469,6 @@ main {
   align-self: center;
   width: 50%;
 }
-.menu .cta:active ~ article::before {
+.menu .cta:active ~ .foodcard::before {
   opacity: 0.1;
 }/*# sourceMappingURL=main.css.map */

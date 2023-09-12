@@ -12,8 +12,9 @@
         justify-content: space-between;
         align-items: center;
         margin:1rem;
-        h1 {font-family:'Shrikhand', cursive;}
-        // i {left:-20px;}
+        h1 {
+            font-family:'Shrikhand', cursive;
+        }
     }
     &__content {
         display:flex;
@@ -31,25 +32,23 @@
     & .foodcard {
         
         animation: menu-opening $anim-dur both ease-in-out;
-
         @for $i from 1 through 9 {
             &--#{$i}{
                 animation-delay: 100ms* $i;
             }
         }
-
         &::before{
-        @include pseudo-elem;
-        border:2px solid $tertiary-color;
-        background-color: aqua;
-        opacity:0;
-        transition: 0.25s ease-in-out;
+            @include pseudo-elem;
+            border:2px solid $tertiary-color;
+            background-color: aqua;
+            opacity:0;
+            transition: 0.25s ease-in-out;
         }    
     }
-        .cta {
-            order:1;
-            align-self:center;
-            width: 50%;
-            &:active~ article::before {opacity:0.1;};
-        }
+    .cta {
+        order:1;
+        align-self:center;
+        width: 50%;
+        &:active~ .foodcard::before {opacity:0.1;};
+    }
 }   
