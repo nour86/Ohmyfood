@@ -210,12 +210,12 @@ img {
 .heartbox {
   position: relative;
   width: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
   z-index: 1;
 }
 .heartbox img {
   position: absolute;
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 .heartbox input[type=checkbox] {
   -webkit-appearance: none;

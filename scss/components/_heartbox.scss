@@ -1,12 +1,11 @@
 .heartbox {
     position:relative;
     width:20px;
+    object-fit: contain; 
     z-index: 1;
     & img {
         position:absolute;              //pour superposer les deux images svg
-        object-fit: contain; 
     }
-
     input[type="checkbox"]{
         appearance: none;               //checkbox masquée
         &:checked~.checked{
