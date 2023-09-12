@@ -1,12 +1,3 @@
-@mixin tagbox {
-        padding:5px 10px;
-        border-radius: 2px;
-        background-color: $tertiary-color;
-        color:darken($tertiary-color,50%);
-        z-index: 1;
-}
-
-
 .restaurantcard {
     width:100%;
     height: 60vw;
@@ -27,27 +18,23 @@
     > img {
         position:relative;
         height:69%;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
     } 
     a {
         position :absolute;
-        z-index: 2;
+        z-index: 1;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
     }
-}
-
-.restaurantcard--new{
-    @extend .restaurantcard;
-    h2::before {
-        content:'nouveau';
-        @include tagbox;
-        position: absolute;
-        font-size: 14px;
-        top:20px;
-        right:20px;
+    &.newcard {
+        h2::before {
+            content:'nouveau';
+            @include tagbox;
+            position: absolute;
+            font-size: 14px;
+            top:20px;
+            right:20px;
+        }
     }
 }

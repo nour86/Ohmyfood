@@ -1,21 +1,21 @@
 .heartbox {
     position:relative;
-    width:30px;
-    z-index: 3;
+    width:20px;
+    z-index: 1;
     & img {
-        position:absolute; //pour superposer les deux images svg
-        top:-5px; 
+        position:absolute;              //pour superposer les deux images svg
+        object-fit: contain; 
     }
 
     input[type="checkbox"]{
-        appearance: none;
+        appearance: none;               //checkbox masquée
         &:checked~.checked{
-            @include transition-ease;
-            opacity:1;
+            @include transition-ease; 
+            opacity:1;                  //coeur plein visible
         }
         &:not(:checked)~.checked{
             @include transition-ease;
-            opacity:0;
+            opacity:0;                  //coeur plein masqué
         }
     }
     &:hover{

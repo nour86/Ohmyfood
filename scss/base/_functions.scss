@@ -60,6 +60,13 @@
     border-bottom:2px solid $color;}
 }
 
+@mixin tagbox {
+  padding:5px 10px;
+  border-radius: 2px;
+  background-color: $tertiary-color;
+  color:darken($tertiary-color,50%);
+}
+
 @mixin transition-ease {
   transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
