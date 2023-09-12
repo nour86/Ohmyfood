@@ -1,15 +1,4 @@
 
-.location {
-    @include flexCenter(row);
-    height: 50px;
-    width: 100%;
-    padding:0;
-    background: linear-gradient(0deg,$secondary-bg-color 95%, lightgrey 100%);
-    i { margin-right: 1rem;}
-    transform-origin: top;
-    animation: location-opening $anim-dur/2 $anim-delay/2 both ease-out;
-}
-
 .intro {
         text-align: center;
         background-color:$primary-bg-color;
