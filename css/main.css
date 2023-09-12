@@ -142,34 +142,34 @@ img {
   transform: translateX(0);
 }
 
-.restaurant-card, .restaurant-card--new {
+.restaurantcard, .restaurantcard--new {
   width: 100%;
   height: 60vw;
   margin-bottom: 1.125rem;
 }
-.restaurant-card__content {
+.restaurantcard__content {
   padding: 13px;
   display: grid;
   align-items: center;
   grid-template-areas: "h2 label" "p label";
   grid-template-columns: 1fr 50px;
 }
-.restaurant-card__content h2 {
+.restaurantcard__content h2 {
   grid-area: h2;
 }
-.restaurant-card__content label {
+.restaurantcard__content label {
   grid-area: label;
 }
-.restaurant-card__content p {
+.restaurantcard__content p {
   grid-area: p;
 }
-.restaurant-card > img, .restaurant-card--new > img {
+.restaurantcard > img, .restaurantcard--new > img {
   position: relative;
   height: 69%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-.restaurant-card a, .restaurant-card--new a {
+.restaurantcard a, .restaurantcard--new a {
   position: absolute;
   z-index: 2;
   top: 0;
@@ -178,7 +178,7 @@ img {
   height: 100%;
 }
 
-.restaurant-card--new h2::before {
+.restaurantcard--new h2::before {
   content: "nouveau";
   padding: 5px 10px;
   border-radius: 2px;
@@ -216,34 +216,33 @@ img {
   opacity: 0.66;
 }
 
-.heart-checkbox {
+.heartbox {
   position: relative;
   width: 30px;
   z-index: 3;
 }
-.heart-checkbox img {
+.heartbox img {
   position: absolute;
   top: -5px;
 }
-.heart-checkbox input[type=checkbox] {
+.heartbox input[type=checkbox] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
-.heart-checkbox input[type=checkbox]:checked ~ .checked {
+.heartbox input[type=checkbox]:checked ~ .checked {
   transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
-  color: red;
   opacity: 1;
 }
-.heart-checkbox input[type=checkbox]:not(:checked) ~ .checked {
+.heartbox input[type=checkbox]:not(:checked) ~ .checked {
   transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   opacity: 0;
 }
-.heart-checkbox:hover {
+.heartbox:hover {
   cursor: pointer;
 }
 

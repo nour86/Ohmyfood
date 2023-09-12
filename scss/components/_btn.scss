@@ -1,8 +1,10 @@
+$border-radius:25px;
+
 
 @mixin buttonshape {
     @include box-shadow;
     border:0px;
-    border-radius: 25px;
+    border-radius: $border-radius;
     height:72px;
     margin: 15px 0px;
     padding:0px 19px;
@@ -25,30 +27,4 @@
     linear-gradient($secondary-color, $primary-color);
     font-weight: 400;
     color:white;
-}
-
-.heart-checkbox {
-    position:relative;
-    width:30px;
-    z-index: 3;
-    & img {
-        position:absolute; //pour superposer les deux images svg
-        top:-5px; 
-    }
-
-    input[type="checkbox"]{
-        appearance: none;
-        &:checked~.checked{
-            @include transition-ease;
-            color:red;
-            opacity:1;
-        }
-        &:not(:checked)~.checked{
-            @include transition-ease;
-            opacity:0;
-        }
-    }
-    &:hover{
-        cursor:pointer;
-    }
 }
