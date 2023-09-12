@@ -50,8 +50,23 @@
         animation: menu-opening $anim-dur both ease-in-out;
         @for $i from 1 through 9 {
             &--#{$i}{
-                animation-delay: 100ms* $i; // cartes apparraissent avec un délai de 100ms entre elles
+                animation-delay: $anim-delay + 100ms* $i; // cartes apparraissent avec un délai de 100ms entre elles
             }
         }
     }
-}   
+}
+
+.cover-image {
+    position:relative;
+    &::before{
+        content:' ';
+        position:absolute;
+        width: 100%;
+        height:50px;
+        background-color:white;
+        opacity:0;
+        transform-origin: top;
+        animation: slide-up $anim-dur*0.5 $anim-delay both ease-out;
+    }
+    
+}
