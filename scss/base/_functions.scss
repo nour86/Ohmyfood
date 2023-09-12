@@ -15,7 +15,6 @@
   }
 
 @mixin buttonshape {
-  @include box-shadow;
   border:0px;
   border-radius: 25px;
   height:72px;

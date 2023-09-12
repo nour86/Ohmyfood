@@ -183,7 +183,6 @@ img {
 }
 
 .cta {
-  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.2));
   border: 0px;
   border-radius: 25px;
   height: 72px;
@@ -191,16 +190,16 @@ img {
   padding: 0px 19px;
   display: grid;
   align-items: center;
-  font-size: 1.1rem;
-  font-weight: 600;
-  height: 50px;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.2));
   transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
-  margin: 30px 0px;
-  background: linear-gradient(#FF79DA, #9356DC);
+  font-size: 1.1rem;
   font-weight: 400;
   color: white;
+  height: 50px;
+  margin: 30px 0px;
+  background: linear-gradient(#FF79DA, #9356DC);
 }
 .cta:hover {
   cursor: pointer;
@@ -354,25 +353,25 @@ main {
   justify-items: left;
   background-color: #EAEAEA;
 }
-.instructions i {
+.instructions__button i {
   color: grey;
   justify-self: center;
 }
-.instructions__button:nth-child(4) i {
-  color: #9356DC;
-}
-.instructions .dot {
+.instructions__button .dot {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #9356DC;
   color: #fff;
-  position: absolute;
-  left: -10px;
   height: 25px;
   width: 25px;
   border-radius: 50%;
+  position: absolute;
+  left: -10px;
+}
+.instructions__button:nth-last-child(1) i {
+  color: #9356DC;
 }
 
 .restaurants {

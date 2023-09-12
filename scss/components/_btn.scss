@@ -1,15 +1,28 @@
 
 .cta {
-    @include buttonshape{
-        font-size: 1.1rem;
-        font-weight: 600;
-        height: 50px;
-    };
+    @include buttonshape;
+    @include box-shadow;
     @include transition-ease;
     @include hover-lighten;
-    margin: 30px 0px;
-    background:
-    linear-gradient($secondary-color, $primary-color);
+    //font//
+    font-size: 1.1rem;
     font-weight: 400;
     color:white;
+    //size//
+    height: 50px;
+    margin: 30px 0px;
+    //background//
+    background:
+    linear-gradient($secondary-color, $primary-color);
+
+}
+
+
+@mixin rounded-dot($color) {
+    @include flexCenter (column);
+    background: $color;
+    color: set-text-color($color);
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
 }
