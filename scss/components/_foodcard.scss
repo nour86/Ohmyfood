@@ -1,14 +1,19 @@
-.food-card {
-
-    width:100%;
+.foodcard {
     height: 69px;
     padding:0px;
     margin-bottom: 1.125rem;
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items:center;
     overflow: hidden;
+    h3{
+        font-size: 1.125rem;
+        font-weight:500;
+    }
+    p {
+        font-size: 0.9rem;
+    }
     &__content {
         display: flex;
         flex-direction: column;
@@ -19,15 +24,16 @@
     }
     &__price {
         position:relative;
+        padding:0;
         flex-shrink: 0;
-        width: 100px;
-        left:51px;
+        width: 25%;
         @include flexCenter(row);
         font-weight: bolder;
         & span {
             @include flexCenter(row);
-            background-color: white;
             color:black;
+            position:relative;
+            top:1rem;
             width:50%;
         }
         & i {
@@ -35,12 +41,13 @@
             background-color: $tertiary-color;
             color:white;
             height: 100%;
-            width: 50px;
+            width:50%;
         }
 
     }
-    & .checked {
-            @include transition-ease;
+    & > .checked {
+            transform:translateX(50%);
+            transition: all 250ms ease-in-out;
             height:100%;
             color:white;
     }
@@ -59,8 +66,8 @@
         }
 
         &:checked~.checked {
-            transform:translateX(-50px);
+            transform:translateX(0);
             }
-
     };
+
 }

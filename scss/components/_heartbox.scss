@@ -1,0 +1,24 @@
+.heartbox {
+    position:relative;
+    width:30px;
+    z-index: 3;
+    & img {
+        position:absolute; //pour superposer les deux images svg
+        top:-5px; 
+    }
+
+    input[type="checkbox"]{
+        appearance: none;
+        &:checked~.checked{
+            @include transition-ease;
+            opacity:1;
+        }
+        &:not(:checked)~.checked{
+            @include transition-ease;
+            opacity:0;
+        }
+    }
+    &:hover{
+        cursor:pointer;
+    }
+}
