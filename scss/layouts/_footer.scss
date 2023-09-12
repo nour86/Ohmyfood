@@ -1,8 +1,9 @@
 
 footer {
+    display:flex;
+    flex-direction: column;
     $bg-color: $tertiary-bg-color;
-    padding-bottom:1rem;
-    padding-left: 1.5rem;
+    padding: 1.5rem;
     font-size: 1rem;
     line-height: 1.5rem;
     background: $bg-color;
@@ -12,9 +13,25 @@ footer {
         font-size: 1.125rem;
         margin:1rem 0;
     }
+    ul {
+        display:flex;
+        flex-direction: column;
+    }
     i {
         margin:0;
         padding: 0 10px 0 0;
     }
     a {color:set-text-color($bg-color);}
+
+    @include lg {
+        flex-direction:row-reverse;
+        ul{
+            margin:1rem;
+            flex-direction: row;
+            align-items: center;
+            gap:1rem;
+        }
+
+
+    }
   }

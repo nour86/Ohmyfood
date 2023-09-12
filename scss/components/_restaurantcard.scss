@@ -31,4 +31,9 @@
             right:20px;
         }
     }
+
+    @include lg {
+        height:251px;
+        width:45%;
+    }
 }

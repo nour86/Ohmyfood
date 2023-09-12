@@ -223,6 +223,12 @@ img {
   top: 20px;
   right: 20px;
 }
+@media (min-width: 992px) {
+  .restaurantcard {
+    height: 251px;
+    width: 45%;
+  }
+}
 
 .cta {
   border: 0px;
@@ -293,8 +299,9 @@ article {
 }
 
 footer {
-  padding-bottom: 1rem;
-  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
   background: #353535;
@@ -305,12 +312,27 @@ footer h3 {
   font-size: 1.125rem;
   margin: 1rem 0;
 }
+footer ul {
+  display: flex;
+  flex-direction: column;
+}
 footer i {
   margin: 0;
   padding: 0 10px 0 0;
 }
 footer a {
   color: #fff;
+}
+@media (min-width: 992px) {
+  footer {
+    flex-direction: row-reverse;
+  }
+  footer ul {
+    margin: 1rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
 }
 
 header {
@@ -338,6 +360,27 @@ header i.hidden {
   animation: hide-arrow 250ms 62.5ms both ease-out;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  width: 100%;
+  max-width: 1440px;
+}
+
+main {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #F6F6F6;
+}
+
 section {
   display: flex;
   flex-direction: column;
@@ -348,25 +391,10 @@ section {
   margin: 0;
   padding: 20px;
   width: 100%;
+  max-width: 1080px;
 }
 section > h1, section > h2 {
   margin: 30px 0px;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-  width: 100%;
-  max-width: 1440px;
-}
-
-main {
-  width: 100%;
-  max-width: 1440px;
-  overflow: hidden;
-  background-color: #F6F6F6;
 }
 
 .location {
@@ -392,17 +420,13 @@ main {
   background-color: #F6F6F6;
 }
 
-@media (min-width: 992px) {
-  .instructions__grid {
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 2rem;
-  }
-}
 .instructions {
-  align-items: start;
+  align-items: center;
   padding: 20px;
   background-color: white;
+}
+.instructions h2 {
+  align-self: start;
 }
 .instructions__grid {
   display: flex;
@@ -450,29 +474,37 @@ main {
 .instructions__button:nth-last-child(1) i {
   color: #9356DC;
 }
+@media (min-width: 992px) {
+  .instructions .instructions__grid {
+    max-width: 1080px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 2rem;
+  }
+}
 
 .restaurants {
-  align-items: start;
+  align-items: center;
   background-color: #F6F6F6;
+}
+.restaurants h2 {
+  align-self: start;
 }
 .restaurants__grid {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-
 @media (min-width: 992px) {
   .restaurants__grid {
+    max-width: 1080px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 3rem;
-  }
-  .restaurantcard {
-    height: 251px;
-    width: 40%;
+    gap: 6rem;
   }
 }
+
 .menu {
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;

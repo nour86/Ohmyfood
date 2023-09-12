@@ -15,23 +15,13 @@
         background-color:$primary-bg-color;
 }
 
-@include lg {
-    .instructions{
-        &__grid{
-            flex-direction: row;
-            justify-content: space-evenly;
-            gap:2rem;
-        }
-    }
-}
-
-
 // section instructions
 
 .instructions {
-    align-items: start;
+    align-items: center;
     padding:20px;
     background-color: white;
+    & h2 {align-self:start;}
     &__grid{
         @include flexCenter(column);
         width: 100%;
@@ -59,34 +49,44 @@
         i {color:$primary-color;}
     }
 
+    //media querries
+
+    @include lg {
+        .instructions{
+            &__grid{
+                max-width: 1080px;
+                flex-direction: row;
+                justify-content: space-evenly;
+                gap:2rem;
+            }
+        }
+    }
+
 }
 
 // section restaurants 
 
 .restaurants {
-    align-items: start;
+    align-items:center;
     background-color: $primary-bg-color;
+    & h2 {align-self: start;}
     &__grid {
         display:flex;
         flex-direction: column;
         width:100%;
     }
+
+    //media querries //
+    @include lg {
+        &__grid{
+            max-width: 1080px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap:6rem;
+        }
+    }
 }
 
 
 //media querries
-
-@include lg {
-    .restaurants{
-        &__grid{
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap:3rem;
-        }
-    }
-    .restaurantcard {
-        height:251px;
-        width:40%;
-    }
-}
