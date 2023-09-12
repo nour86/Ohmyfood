@@ -1,19 +1,4 @@
-$border-radius:25px;
 
-
-@mixin buttonshape {
-    @include box-shadow;
-    border:0px;
-    border-radius: $border-radius;
-    height:72px;
-    margin: 15px 0px;
-    padding:0px 19px;
-    display: grid;
-    align-items:center;
-    @content;
-}
-
-    
 .cta {
     @include buttonshape{
         font-size: 1.1rem;
