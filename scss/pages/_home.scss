@@ -43,7 +43,13 @@
     &__button:nth-last-child(1){
         i {color:$primary-color;}
     }
-    
+
+    //media querries
+
+    @include lg {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 // section restaurants 
