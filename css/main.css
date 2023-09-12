@@ -266,6 +266,9 @@ footer i {
   margin: 0;
   padding: 0 10px 0 0;
 }
+footer a {
+  color: #fff;
+}
 
 header {
   display: flex;
