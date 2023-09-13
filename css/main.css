@@ -197,6 +197,7 @@ img {
   width: 100%;
   height: 67vw;
   max-height: 251px;
+  max-width: 400px;
   margin-bottom: 1.125rem;
 }
 .restaurantcard__content {
@@ -529,6 +530,7 @@ section {
 .restaurants__grid {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
