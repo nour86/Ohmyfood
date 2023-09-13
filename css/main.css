@@ -116,10 +116,11 @@ img {
   }
 }
 .foodcard {
+  display: flex;
   height: 69px;
   margin-bottom: 1.125rem;
   flex-direction: row;
-  align-items: center;
+  gap: 0px;
 }
 .foodcard h3 {
   font-size: 1.125rem;
@@ -130,9 +131,7 @@ img {
 }
 .foodcard__content {
   align-self: start;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  width: 80%;
   margin: 13px;
   white-space: nowrap;
   overflow: hidden;
@@ -140,7 +139,7 @@ img {
 }
 .foodcard__price {
   align-self: end;
-  position: relative;
+  position: absolute;
   right: -60px;
   padding: 0;
   display: flex;

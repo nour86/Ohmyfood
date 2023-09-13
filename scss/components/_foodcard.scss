@@ -1,8 +1,9 @@
 .foodcard {
+    display:flex;
     height: 69px;
     margin-bottom: 1.125rem;
     flex-direction: row;
-    align-items:center;
+    gap:0px;
     h3{
         font-size: 1.125rem;
         font-weight:500;
@@ -12,9 +13,7 @@
     }
     &__content {
         align-self: start;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+        width: 80%;
         margin:13px;
         white-space: nowrap;
         overflow: hidden;
@@ -22,7 +21,7 @@
     }
     &__price {
         align-self: end;
-        position:relative; //si position relative, la div prend le même espace (100px) qu'elle soit checkée ou non
+        position:absolute; //si position relative, la div prend le même espace (100px) qu'elle soit checkée ou non
         right:-60px;
         padding:0;
         // flex-shrink: 0;
