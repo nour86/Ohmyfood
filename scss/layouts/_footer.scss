@@ -23,7 +23,9 @@ footer {
     }
     a {color:set-text-color($bg-color);}
 
-    @include lg {
+    //media querries//
+
+    @include media-min($medium) {
         flex-direction:row-reverse;
         ul{
             margin:1rem;
@@ -31,7 +33,5 @@ footer {
             align-items: center;
             gap:1rem;
         }
-
-
     }
   }
