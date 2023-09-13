@@ -39,9 +39,10 @@ a {
 }
 
 img {
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 @keyframes menu-opening {
@@ -139,8 +140,6 @@ img {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 0;
   font-weight: bolder;
 }
 .foodcard__price span {
@@ -148,8 +147,6 @@ img {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 0;
   color: black;
   position: relative;
   top: 1rem;
@@ -160,8 +157,6 @@ img {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 0;
   background-color: #99E2D0;
   color: white;
   height: 100%;
@@ -219,9 +214,9 @@ img {
   background-color: #99E2D0;
   color: #1b6150;
   position: absolute;
-  font-size: 14px;
-  top: 20px;
-  right: 20px;
+  font-size: 0.8rem;
+  top: 5%;
+  right: 5%;
 }
 @media (min-width: 992px) {
   .restaurantcard {
@@ -363,9 +358,8 @@ header i.hidden {
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   min-height: 100vh;
-  margin: 0;
+  margin: auto;
   width: 100%;
   max-width: 1440px;
 }
@@ -378,7 +372,7 @@ main {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-color: #F6F6F6;
+  background-color: white;
 }
 
 section {
@@ -386,15 +380,7 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 0;
-  margin: 0;
-  padding: 20px;
   width: 100%;
-  max-width: 1080px;
-}
-section > h1, section > h2 {
-  margin: 30px 0px;
 }
 
 .location {
@@ -402,8 +388,6 @@ section > h1, section > h2 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 0;
   height: 50px;
   width: 100%;
   padding: 0;
@@ -416,16 +400,38 @@ section > h1, section > h2 {
 }
 
 .intro {
-  text-align: center;
   background-color: #F6F6F6;
 }
+.intro__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+  width: 100%;
+  max-width: 1080px;
+}
+.intro__block > h1, .intro__block > h2 {
+  margin: 30px 0px;
+}
 
-.instructions {
+.instructions__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+  width: 100%;
+  max-width: 1080px;
   align-items: center;
   padding: 20px;
-  background-color: white;
 }
-.instructions h2 {
+.instructions__block > h1, .instructions__block > h2 {
+  margin: 30px 0px;
+}
+.instructions__block h2 {
   align-self: start;
 }
 .instructions__grid {
@@ -433,8 +439,6 @@ section > h1, section > h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 0;
   width: 100%;
 }
 .instructions__button {
@@ -461,8 +465,6 @@ section > h1, section > h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 0;
   background: #9356DC;
   color: #fff;
   height: 1.5rem;
@@ -484,8 +486,21 @@ section > h1, section > h2 {
 }
 
 .restaurants {
-  align-items: center;
   background-color: #F6F6F6;
+}
+.restaurants__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+  width: 100%;
+  max-width: 1080px;
+  align-items: center;
+}
+.restaurants__block > h1, .restaurants__block > h2 {
+  margin: 30px 0px;
 }
 .restaurants h2 {
   align-self: start;
@@ -506,12 +521,27 @@ section > h1, section > h2 {
 }
 
 .menu {
+  max-width: 1080px;
+  background-color: #F6F6F6;
+  padding: 1rem;
+  top: -30px;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
   position: relative;
-  padding: 1rem;
-  top: -30px;
-  background-color: #F6F6F6;
+}
+.menu__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+  width: 100%;
+  max-width: 1080px;
+  max-width: 634px;
+}
+.menu__block > h1, .menu__block > h2 {
+  margin: 30px 0px;
 }
 .menu__title {
   display: flex;
@@ -543,7 +573,6 @@ section > h1, section > h2 {
   border-bottom: 2px solid #99E2D0;
 }
 .menu .cta {
-  order: 1;
   align-self: center;
   width: 50%;
 }
@@ -553,48 +582,42 @@ section > h1, section > h2 {
 .menu .foodcard {
   animation: menu-opening 500ms both ease-in-out;
 }
-.menu .foodcard::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border: 2px solid #99E2D0;
-  background-color: aqua;
-  opacity: 0;
-  transition: 0.25s ease-in-out;
-}
-.menu .foodcard--1 {
+.menu .foodcard:nth-of-type(1) {
   animation-delay: 350ms;
 }
-.menu .foodcard--2 {
+.menu .foodcard:nth-of-type(2) {
   animation-delay: 450ms;
 }
-.menu .foodcard--3 {
+.menu .foodcard:nth-of-type(3) {
   animation-delay: 550ms;
 }
-.menu .foodcard--4 {
+.menu .foodcard:nth-of-type(4) {
   animation-delay: 650ms;
 }
-.menu .foodcard--5 {
+.menu .foodcard:nth-of-type(5) {
   animation-delay: 750ms;
 }
-.menu .foodcard--6 {
+.menu .foodcard:nth-of-type(6) {
   animation-delay: 850ms;
 }
-.menu .foodcard--7 {
+.menu .foodcard:nth-of-type(7) {
   animation-delay: 950ms;
 }
-.menu .foodcard--8 {
+.menu .foodcard:nth-of-type(8) {
   animation-delay: 1050ms;
 }
-.menu .foodcard--9 {
+.menu .foodcard:nth-of-type(9) {
   animation-delay: 1150ms;
+}
+.menu .foodcard:nth-of-type(10) {
+  animation-delay: 1250ms;
 }
 
 .cover-image {
   position: relative;
+  width: 100%;
+  height: 73vw;
+  max-height: 30vh;
 }
 .cover-image::before {
   content: " ";

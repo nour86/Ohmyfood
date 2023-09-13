@@ -11,17 +11,21 @@
 }
 
 .intro {
-        text-align: center;
-        background-color:$primary-bg-color;
+    background-color:$primary-bg-color;
+    &__block {
+        @include block;
+    }
 }
 
 // section instructions
 
 .instructions {
-    align-items: center;
-    padding:20px;
-    background-color: white;
-    & h2 {align-self:start;}
+    &__block{
+        @include block;
+        align-items: center;
+        padding:20px;
+        & h2 {align-self:start;}
+    }
     &__grid{
         @include flexCenter(column);
         width: 100%;
@@ -39,11 +43,11 @@
             color: grey;
             justify-self: center;
         }
-        .dot {
-            @include rounded-dot($primary-color);
-            position:absolute;
-            left:-10px;
-        }
+    .dot {
+        @include rounded-dot($primary-color);
+        position:absolute;
+        left:-10px;
+    }
     }
     &__button:nth-last-child(1){
         i {color:$primary-color;}
@@ -67,8 +71,11 @@
 // section restaurants 
 
 .restaurants {
-    align-items:center;
     background-color: $primary-bg-color;
+    &__block {
+        @include block;
+        align-items:center;
+    }
     & h2 {align-self: start;}
     &__grid {
         display:flex;

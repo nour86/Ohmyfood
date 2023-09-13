@@ -1,9 +1,8 @@
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   min-height:100vh;
-  margin:0;
+  margin:auto;
   width: 100%;
   max-width: 1440px;
 }
@@ -17,16 +16,20 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 overflow: hidden;
-background-color: $primary-bg-color;
+background-color: white;
 }
 
 
 section {  
     @include flexCenter(column);
-    margin:0;
-    padding:20px;
     width: 100%;
-    max-width: 1080px;
-    >h1, >h2 { margin:30px 0px};
   }
-  
+
+@mixin block {
+  @include flexCenter(column);
+  margin:0;
+  padding:20px;
+  width: 100%;
+  max-width: 1080px;
+  >h1, >h2 { margin:30px 0px};
+}
