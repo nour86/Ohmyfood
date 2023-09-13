@@ -132,15 +132,15 @@ img {
   align-self: start;
   display: flex;
   flex-direction: column;
+  width: 100%;
   margin: 13px;
-  width: 120%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .foodcard__price {
   align-self: end;
-  position: absolute;
+  position: relative;
   right: -60px;
   padding: 0;
   display: flex;

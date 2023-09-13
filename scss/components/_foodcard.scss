@@ -14,15 +14,15 @@
         align-self: start;
         display: flex;
         flex-direction: column;
+        width: 100%;
         margin:13px;
-        width: 120%;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
     &__price {
         align-self: end;
-        position:absolute; //si position relative, la div prend le même espace (100px) qu'elle soit checkée ou non
+        position:relative; //si position relative, la div prend le même espace (100px) qu'elle soit checkée ou non
         right:-60px;
         padding:0;
         // flex-shrink: 0;
