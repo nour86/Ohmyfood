@@ -119,7 +119,6 @@ img {
   height: 69px;
   margin-bottom: 1.125rem;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
 }
 .foodcard h3 {
@@ -130,18 +129,20 @@ img {
   font-size: 0.9rem;
 }
 .foodcard__content {
+  align-self: start;
   display: flex;
   flex-direction: column;
   margin: 13px;
+  width: 120%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .foodcard__price {
-  position: relative;
+  align-self: end;
+  position: absolute;
+  right: -60px;
   padding: 0;
-  flex-shrink: 0;
-  width: 25%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -154,9 +155,12 @@ img {
   justify-content: center;
   align-items: center;
   color: black;
+  background-color: white;
+  height: 100%;
   position: relative;
+  padding-right: 1rem;
   top: 1rem;
-  width: 50%;
+  width: 3rem;
 }
 .foodcard__price i {
   display: flex;
@@ -166,13 +170,12 @@ img {
   background-color: #99E2D0;
   color: white;
   height: 100%;
-  width: 50%;
+  width: 60px;
 }
-.foodcard > .checked {
-  transform: translateX(50%);
-  transition: all 250ms ease-in-out;
+.foodcard .checked {
+  transform: translateX(0px);
+  transition: all 0.5s ease-in-out;
   height: 100%;
-  color: white;
 }
 .foodcard input[type=checkbox] {
   position: absolute;
@@ -187,7 +190,7 @@ img {
   cursor: pointer;
 }
 .foodcard input[type=checkbox]:checked ~ .checked {
-  transform: translateX(0);
+  transform: translateX(-60px);
 }
 
 .restaurantcard {

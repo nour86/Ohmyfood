@@ -2,7 +2,6 @@
     height: 69px;
     margin-bottom: 1.125rem;
     flex-direction: row;
-    justify-content:space-between;
     align-items:center;
     h3{
         font-size: 1.125rem;
@@ -12,41 +11,47 @@
         font-size: 0.9rem;
     }
     &__content {
+        align-self: start;
         display: flex;
         flex-direction: column;
         margin:13px;
+        width: 120%;
         white-space: nowrap;
         overflow: hidden;
-        text-overflow:ellipsis;
+        text-overflow: ellipsis;
     }
     &__price {
-        position:relative;
+        align-self: end;
+        position:absolute; //si position relative, la div prend le même espace (100px) qu'elle soit checkée ou non
+        right:-60px;
         padding:0;
-        flex-shrink: 0;
-        width: 25%;
+        // flex-shrink: 0;
         @include flexCenter(row);
         font-weight: bolder;
         & span {
             @include flexCenter(row);
             color:black;
+            background-color: white;
+            height: 100%;
             position:relative;
+            padding-right: 1rem;
             top:1rem;
-            width:50%;
+            width:3rem;
         }
         & i {
             @include flexCenter(row);
             background-color: $tertiary-color;
             color:white;
             height: 100%;
-            width:50%;
+            width:60px;
         }
 
     }
-    & > .checked {
-            transform:translateX(50%); // décalé de 50% sur la droite par défaut
-            transition: all 250ms ease-in-out;
+    & .checked {
+            transform:translateX(0px); // décalé de 50% sur la droite par défaut
+            transition: all 0.5s ease-in-out;
             height:100%;
-            color:white;
+            // color:white;
     }
 
     input[type="checkbox"]{
@@ -59,7 +64,9 @@
             cursor:pointer;
         }
         &:checked~.checked {
-            transform:translateX(0); // recentré lorsque checké
+            transform:translateX(-60px); // recentré lorsque checké
             }
     }
+
 }
+
