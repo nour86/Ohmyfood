@@ -32,91 +32,97 @@
         </div>
 
             <section class="intro">
-                <h1>Réservez le menu qui <br> vous convient</h1>
-                <p>Découvrez des <em>restaurants</em> d'exception, <em>sélectionnés</em> par nos soins.</p>
-                <button type="button" onclick="window.location.href='#restaurants'" class="cta"><span>Explorez nos restaurants</span></button>
+                <div class="section_content">
+                    <h1>Réservez le menu qui <br> vous convient</h1>
+                    <p>Découvrez des <em>restaurants</em> d'exception, <em>sélectionnés</em> par nos soins.</p>
+                    <button type="button" onclick="window.location.href='#restaurants'" class="cta"><span>Explorez nos restaurants</span></button>
+                </div>
             </section>
             
-            <section class="instructions"> 
+            <section class="instructions">
+                <div class="section_content">
                     <h2>Fonctionnement</h2>
                     <div class="instructions__grid">
                         <div class="instructions__button"><span class="dot">1</span><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</div>
                         <div class="instructions__button"><span class="dot">2</span><i class="fa-solid fa-list-ul"></i>Composez votre menu</div>
                         <div class="instructions__button"><span class="dot">3</span><i class="fa-solid fa-store"></i>Dégustez au restaurant</div>
                     </div>
-                </section>
+                </div> 
+            </section>
 
         <section class="restaurants" id="restaurants">
-            <h2>Restaurants</h2>
+            <div class="section_content">
+                <h2>Restaurants</h2>
 
-            <div class="restaurants__grid">
+                <div class="restaurants__grid">
 
-                    <article class="restaurantcard newcard">
-                        <a href="restaurants/la_palette_du_gout.html"></a>
-                        <img src="img/restaurants/La_palette_du_gout.jpg" alt="photo d'une assiette">
-                        <div class="restaurantcard__content">
-                            <div>                           
-                                <h2>La palette du gout</h2>
-                                <p>Ménilmontant</p>
+                        <article class="restaurantcard newcard">
+                            <a href="restaurants/la_palette_du_gout.html"></a>
+                            <img src="img/restaurants/La_palette_du_gout.jpg" alt="photo d'une assiette">
+                            <div class="restaurantcard__content">
+                                <div>                           
+                                    <h2>La palette du gout</h2>
+                                    <p>Ménilmontant</p>
+                                </div>
+                                <label class="heartbox">
+                                    <input type="checkbox">
+                                    <img src="img/logo/liked.svg" alt="coeur rempli" class="checked">
+                                    <img src="img/logo/default.svg" alt="coeur vide" class="unchecked">
+                                </label>
                             </div>
+
+                        </article>
+
+                        <article class="restaurantcard newcard">
+                            <!-- <a href="restaurants/la_note_enchantee.html"></a> -->
+                            <img src="img/restaurants/la_note_enchantee.jpg" alt="photo d'une assiette">
+                            <div class="restaurantcard__content">
+                                <div>
+                                    <h2>La note enchantée</h2>
+                                    <p>Charonne</p>
+                                </div>
+                                <label class="heartbox">
+                                    <input type="checkbox" checked>
+                                    <img src="img/logo/liked.svg" alt="coeur rempli" class="checked">
+                                    <img src="img/logo/default.svg" alt="coeur vide" class="unchecked">
+                                </label>
+                            </div>
+                        </article>
+
+                        <article class="restaurantcard">
+                            <!-- <a href="restaurants/A_la_francaise.html"></a> -->
+                            <img src="img/restaurants/a_la_francaise.jpg" alt="photo d'une assiette">
+                            <div class="restaurantcard__content">
+                                <div>
+                                    <h2>A la française</h2>
+                                    <p>Cité Rouge</p>
+                                </div>
                             <label class="heartbox">
                                 <input type="checkbox">
                                 <img src="img/logo/liked.svg" alt="coeur rempli" class="checked">
                                 <img src="img/logo/default.svg" alt="coeur vide" class="unchecked">
                             </label>
-                        </div>
-
-                    </article>
-
-                    <article class="restaurantcard newcard">
-                        <!-- <a href="restaurants/la_note_enchantee.html"></a> -->
-                        <img src="img/restaurants/la_note_enchantee.jpg" alt="photo d'une assiette">
-                        <div class="restaurantcard__content">
-                            <div>
-                                <h2>La note enchantée</h2>
-                                <p>Charonne</p>
                             </div>
-                            <label class="heartbox">
-                                <input type="checkbox" checked>
-                                <img src="img/logo/liked.svg" alt="coeur rempli" class="checked">
-                                <img src="img/logo/default.svg" alt="coeur vide" class="unchecked">
-                            </label>
-                        </div>
-                    </article>
+                        </article>
 
-                    <article class="restaurantcard">
-                        <!-- <a href="restaurants/A_la_francaise.html"></a> -->
-                        <img src="img/restaurants/a_la_francaise.jpg" alt="photo d'une assiette">
-                        <div class="restaurantcard__content">
-                            <div>
-                                <h2>A la française</h2>
-                                <p>Cité Rouge</p>
+                        <article class="restaurantcard">
+                                <!-- <a href="restaurants/le_dellice_des_sens.html"></a> -->
+                            <img src="img/restaurants/le_delice_des_sens.jpg" alt="photo d'une assiette">
+
+                            <div class="restaurantcard__content">
+                                <div>
+                                    <h2>Le délice des sens</h2>
+                                    <p>Folie-Méricourt</p>
+                                </div>
+                                <label class="heartbox">
+                                    <input type="checkbox">
+                                    <img src="img/logo/liked.svg" alt="coeur rempli" class="checked">
+                                    <img src="img/logo/default.svg" alt="coeur vide" class="unchecked">
+                                </label>
                             </div>
-                        <label class="heartbox">
-                            <input type="checkbox">
-                            <img src="img/logo/liked.svg" alt="coeur rempli" class="checked">
-                            <img src="img/logo/default.svg" alt="coeur vide" class="unchecked">
-                        </label>
-                        </div>
-                    </article>
+                        </article>
 
-                    <article class="restaurantcard">
-                            <!-- <a href="restaurants/le_dellice_des_sens.html"></a> -->
-                        <img src="img/restaurants/le_delice_des_sens.jpg" alt="photo d'une assiette">
-
-                        <div class="restaurantcard__content">
-                            <div>
-                                <h2>Le délice des sens</h2>
-                                <p>Folie-Méricourt</p>
-                            </div>
-                            <label class="heartbox">
-                                <input type="checkbox">
-                                <img src="img/logo/liked.svg" alt="coeur rempli" class="checked">
-                                <img src="img/logo/default.svg" alt="coeur vide" class="unchecked">
-                            </label>
-                        </div>
-                    </article>
-
+                </div>
             </div>
         </section>
 
