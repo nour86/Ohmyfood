@@ -123,18 +123,28 @@ img {
   gap: 0px;
 }
 .foodcard h3 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   font-size: 1.125rem;
   font-weight: 500;
 }
 .foodcard p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   font-size: 0.9rem;
 }
 .foodcard__content {
+  z-index: 1;
   align-self: start;
-  width: 80%;
+  width: 85%;
   margin: 13px;
   white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
+}
+.foodcard__content span {
   text-overflow: ellipsis;
 }
 .foodcard__price {
@@ -180,7 +190,7 @@ img {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 2;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;

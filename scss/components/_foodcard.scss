@@ -5,19 +5,23 @@
     flex-direction: row;
     gap:0px;
     h3{
+        @include ellipsis;
         font-size: 1.125rem;
         font-weight:500;
     }
     p {
+        @include ellipsis;
         font-size: 0.9rem;
     }
     &__content {
+        z-index: 1;
         align-self: start;
-        width: 80%;
+        width: 85%;
         margin:13px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        & span {text-overflow: ellipsis;}
     }
     &__price {
         align-self: end;
@@ -57,7 +61,7 @@
         position:absolute; // prend toute la taille de la carte
         width: 100%;
         height: 100%;
-        z-index: 1;
+        z-index: 2;
         appearance: none; // checkbox invisible
         &:hover{
             cursor:pointer;
