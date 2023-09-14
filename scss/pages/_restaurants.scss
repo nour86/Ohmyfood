@@ -1,12 +1,13 @@
 
 .menu {
+    position:relative;
+    top:-30px;
     max-width: 1080px;
     background-color: $primary-bg-color;
     padding: 1rem;
-    top:-30px;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
-    position:relative;
+
     &__block{
         @include block;
         max-width: 634px;
@@ -20,6 +21,10 @@
         h1 {
             font-family:'Shrikhand', cursive;
         }
+        @include media-min($medium){
+            width: 50%;
+            justify-content: space-around;
+        }
     }
     &__content {
         display:flex;
@@ -30,18 +35,17 @@
             font-size: 1rem;
             font-weight: 300;
             @include stroke-underline($tertiary-color); // pseudo element pour trait vert en dessous
+            margin-top: 2rem;
             margin-bottom: 1rem;
         }
     }
     .cta {
         align-self:center;
         width: 50%;
-        &:active~ .foodcard::before {opacity:0.1;};
     }
+             //animation//
 
     & .foodcard{
-
-           //animation//
         animation: menu-opening $anim-dur both ease-in-out;
     
         @for $i from 1 through 10 {
@@ -56,7 +60,10 @@
     position:relative;
     width: 100%;
     height: 73vw;
-    max-height: 30vh;
+    max-height: 45vh;
+    & img {
+        height: 100%;
+    }
     &::before{
         content:' ';
         position:absolute;

@@ -16,10 +16,6 @@ header {
         position:absolute;
         top:1.5rem;
         left:1.5rem;
-        &.hidden {
-            opacity:0;
-            animation: hide-arrow $anim-dur*0.5 $anim-delay *0.25 both ease-out;
-        }
     }
 
 }
