@@ -194,6 +194,98 @@ img {
   transform: translateX(0);
 }
 
+.foodcard2 {
+  display: flex;
+  height: 69px;
+  margin-bottom: 1.125rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+}
+.foodcard2 h3 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.foodcard2 p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 0.9rem;
+}
+.foodcard2__content {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.foodcard2__content::after {
+  content: " ";
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 20%;
+  position: relative;
+  background-color: red;
+}
+.foodcard2__price {
+  position: absolute;
+  right: 0;
+  padding: 0;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+}
+.foodcard2__price span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  align-items: flex-end;
+  position: relative;
+  padding: 1rem;
+  width: 3rem;
+}
+.foodcard2__price i {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  color: white;
+  height: 100%;
+  width: 3.75rem;
+}
+.foodcard2 .checked {
+  transform: translateX(60%);
+  transition: all 0.25s ease-in-out;
+  height: 100%;
+}
+.foodcard2 input[type=checkbox] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.foodcard2 input[type=checkbox]:hover {
+  cursor: pointer;
+}
+.foodcard2 input[type=checkbox]:checked ~ .checked {
+  transform: translateX(0);
+}
+
 .restaurantcard {
   width: 100%;
   max-width: 500px;
