@@ -149,7 +149,7 @@ img {
 }
 .foodcard__price {
   align-self: end;
-  position: absolute;
+  position: relative;
   right: -60px;
   padding: 0;
   display: flex;
