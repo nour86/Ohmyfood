@@ -1,88 +1,47 @@
-// sass
-//Var
-//colors
-$colorArray: #354558 #625059 #905b5c #bd665e #eb7260;
+$colorArray: #FF79DA #E470da #b762db #9356dc #eb7260;
 $base: #E9E0D6;
-$primary: #000000;
-$accent: #ffffff;
-$secondary: #a9a9a9;
-$n: 5;
+$n: 10;
 $loaderdur:2000ms;
 
-//mixins
-// @mixin fhover($color) {
-//   &:hover {
-//     transition: 350ms ease-in-out;
-//     color:  $color;
-//     transform: scale(1.4)
-//     }
-// }
 
-@mixin flex() {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-   
-// @mixin center {
-//     position: absolute;
-//     left: 50%;
-//     top: 50%;
-//     transform: translate(-50%, -50%);
-// }
-  
-// @mixin aline {
-//     top: 50%;
-//     transform: translateY(-50%);
-// }
+// credit https://codepen.io/akshaycodes/pen/OaXJgZ //
 
-// reset
 .loader {
-    margin: 0;
     box-sizing: border-box;
-    padding: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    height: 500px;
-// h1,h2,h3,h4,h5,h6,a,p,span {
-//     padding-bottom: 0.714em !important;
-//     padding-top: 0.714em !important;
-//     text-transform: uppercase;
-//     letter-spacing: 0.1em;
-//     font-weight: 400;
-//     color: $accent;
-//     font-weight: bold;
-//     text-align: center;
-// }
-    background: $base;
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
-}
-  
-  
-// .noselect {
-//     user-select: none;
-// }
-
-.artboard {
+    overflow: hidden;
+    position: absolute;
     width: 100%;
     height: 100%;
-    @include flex;
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    transform:scale(0.001);
+    animation: loader-in $loaderdur*1.5 forwards ease-in-out; /* le loader occupe toute la page pendant 3s puis disparait */
+
+    &:before{ /* peudo element pour animer l'opacité du fond du loader */
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity:0.8;
+        background-color: white;
+        animation:fade-out $loaderdur $loaderdur forwards ease-out;
+    }
 }
+
   
 .domino {
+    margin-top:30vh;
+    animation: slide-out 0.5s $loaderdur+0.5s forwards ease-out; // animation de sortie
     & > div {
-        border-radius: 8px;
+        border-radius: 0.5rem;
         display: inline-flex;
         transform: rotate(45deg);
-        width: 50px;
-        height: 50px;
-        animation: domino-effect $loaderdur infinite ease-in-out;
+        width: 3rem;
+        height: 3rem;
+        animation: domino-effect $loaderdur backwards ease-out; // rotation de 135deg 
         
-        @each $current-color in $colorArray {
+        @each $current-color in $colorArray { // couleurs de fond des carrés
             $i: index($colorArray, $current-color) ;
             &:nth-child(#{$i}){
                 background: $current-color;
@@ -94,7 +53,7 @@ $loaderdur:2000ms;
         }
         @for $i from 1 through $n {
             &:nth-child(#{$i}){
-                margin: 23px;
+                margin: 1.5rem;
                 animation-delay: #{$loaderdur *0.25 * $i};
             }
         }
@@ -102,37 +61,80 @@ $loaderdur:2000ms;
             content: '';
             position: relative;
             top: 0px;
-            left: -70px;
+            left: -4.5rem;
             opacity: 0;
-            border-radius: 8px;
-            width: 50px;
-            height: 50px;
-            animation:  illusion $loaderdur infinite ease-in-out;
+            border-radius: 0.5rem;
+            width: 3rem;
+            height: 3rem;
+            animation:  illusion $loaderdur forwards ease-out;
+        }
+        &:last-child:after {
+            animation: size-up 1s $loaderdur forwards ease-in-out;
         }
     }
 }
-  
-  
-    
-      
+   
 
 //animation
+@keyframes loader-in {   
+    1% {transform:scale(1);
+    }
+    99% {
+        transform:scale(1);
+    }
+}
 
-  @keyframes spin {
-    to {
-      transform: rotate(140deg);
+@keyframes fade-out {  
+    
+    25% {opacity:0.8;}
+    50% {opacity:0.6;}
+    75% {opacity:0.4}
+    100% {opacity: 0;}
+}
+
+@keyframes slide-out {
+    100% {
+        transform:translateX(2000px);
+        opacity: 0;
     }
-  }
-  @keyframes domino-effect {
-    20%, 100% {
-      transform: rotate(135deg);
+}
+@keyframes size-up {
+    20% {
+        transform: scale(1);
+        opacity: 1;
     }
-  }
-  @keyframes illusion {
-    0%, 25% {
-      opacity: 1;
+    40% {
+        transform:scale(1.5);
+        opacity: 1;
     }
-    26.10%, 33.33%, 100% {
-      opacity: 0;
+    100% {
+        transform:scale(0);
+        opacity: 0;
     }
-  }   
+
+}
+
+@keyframes domino-effect {
+    30% {
+        transform: rotate(135deg);
+    }
+    100% {
+        transform: rotate(135deg);
+    }
+}
+
+@keyframes illusion {
+    0% {
+        opacity: 0;
+        transform:scale(0.2);
+    }
+    25% {
+        opacity: 1;
+        transform:scale(1);
+        transform: rotate(135deg);
+    }
+    50% {
+        opacity:0;
+        transform:scale(0.2);
+    }
+}   

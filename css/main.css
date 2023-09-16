@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -208,10 +209,9 @@ img {
   padding: 13px;
   height: 5rem;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .restaurantcard > img {
   position: relative;
@@ -321,62 +321,65 @@ img {
 }
 
 .loader {
-  margin: 0;
   box-sizing: border-box;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  height: 500px;
-  background: #E9E0D6;
-  font-family: "Raleway", sans-serif;
-  text-align: center;
-}
-
-.artboard {
+  overflow: hidden;
+  position: absolute;
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
+  z-index: 1;
+  transform: scale(0.001);
+  animation: loader-in 3000ms forwards ease-in-out; /* le loader occupe toute la page pendant 3s puis disparait */
+}
+.loader:before { /* peudo element pour animer l'opacité du fond du loader */
+  content: "";
   position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  background-color: white;
+  animation: fade-out 2000ms 2000ms forwards ease-out;
 }
 
+.domino {
+  margin-top: 30vh;
+  animation: slide-out 0.5s 2500ms forwards ease-out;
+}
 .domino > div {
-  border-radius: 8px;
+  border-radius: 0.5rem;
   display: inline-flex;
   transform: rotate(45deg);
-  width: 50px;
-  height: 50px;
-  animation: domino-effect 2000ms infinite ease-in-out;
+  width: 3rem;
+  height: 3rem;
+  animation: domino-effect 2000ms backwards ease-out;
 }
 .domino > div:nth-child(1) {
-  background: #354558;
+  background: #FF79DA;
 }
 .domino > div:nth-child(1):after {
-  background: #354558;
+  background: #FF79DA;
   animation-delay: 500ms;
 }
 .domino > div:nth-child(2) {
-  background: #625059;
+  background: #E470da;
 }
 .domino > div:nth-child(2):after {
-  background: #625059;
+  background: #E470da;
   animation-delay: 1000ms;
 }
 .domino > div:nth-child(3) {
-  background: #905b5c;
+  background: #b762db;
 }
 .domino > div:nth-child(3):after {
-  background: #905b5c;
+  background: #b762db;
   animation-delay: 1500ms;
 }
 .domino > div:nth-child(4) {
-  background: #bd665e;
+  background: #9356dc;
 }
 .domino > div:nth-child(4):after {
-  background: #bd665e;
+  background: #9356dc;
   animation-delay: 2000ms;
 }
 .domino > div:nth-child(5) {
@@ -387,53 +390,123 @@ img {
   animation-delay: 2500ms;
 }
 .domino > div:nth-child(1) {
-  margin: 23px;
+  margin: 1.5rem;
   animation-delay: 500ms;
 }
 .domino > div:nth-child(2) {
-  margin: 23px;
+  margin: 1.5rem;
   animation-delay: 1000ms;
 }
 .domino > div:nth-child(3) {
-  margin: 23px;
+  margin: 1.5rem;
   animation-delay: 1500ms;
 }
 .domino > div:nth-child(4) {
-  margin: 23px;
+  margin: 1.5rem;
   animation-delay: 2000ms;
 }
 .domino > div:nth-child(5) {
-  margin: 23px;
+  margin: 1.5rem;
   animation-delay: 2500ms;
+}
+.domino > div:nth-child(6) {
+  margin: 1.5rem;
+  animation-delay: 3000ms;
+}
+.domino > div:nth-child(7) {
+  margin: 1.5rem;
+  animation-delay: 3500ms;
+}
+.domino > div:nth-child(8) {
+  margin: 1.5rem;
+  animation-delay: 4000ms;
+}
+.domino > div:nth-child(9) {
+  margin: 1.5rem;
+  animation-delay: 4500ms;
+}
+.domino > div:nth-child(10) {
+  margin: 1.5rem;
+  animation-delay: 5000ms;
 }
 .domino > div:after {
   content: "";
   position: relative;
   top: 0px;
-  left: -70px;
+  left: -4.5rem;
   opacity: 0;
-  border-radius: 8px;
-  width: 50px;
-  height: 50px;
-  animation: illusion 2000ms infinite ease-in-out;
+  border-radius: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  animation: illusion 2000ms forwards ease-out;
+}
+.domino > div:last-child:after {
+  animation: size-up 1s 2000ms forwards ease-in-out;
 }
 
-@keyframes spin {
-  to {
-    transform: rotate(140deg);
+@keyframes loader-in {
+  1% {
+    transform: scale(1);
+  }
+  99% {
+    transform: scale(1);
+  }
+}
+@keyframes fade-out {
+  25% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  75% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slide-out {
+  100% {
+    transform: translateX(2000px);
+    opacity: 0;
+  }
+}
+@keyframes size-up {
+  20% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  40% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
   }
 }
 @keyframes domino-effect {
-  20%, 100% {
+  30% {
+    transform: rotate(135deg);
+  }
+  100% {
     transform: rotate(135deg);
   }
 }
 @keyframes illusion {
-  0%, 25% {
-    opacity: 1;
-  }
-  26.10%, 33.33%, 100% {
+  0% {
     opacity: 0;
+    transform: scale(0.2);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1);
+    transform: rotate(135deg);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(0.2);
   }
 }
 article {
@@ -507,8 +580,7 @@ header i {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+  position: relative;
   margin: auto;
   width: 100%;
   max-width: 1440px;
@@ -518,10 +590,10 @@ main {
   width: 100%;
   max-width: 1440px;
   display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   background-color: white;
 }
 
@@ -543,7 +615,7 @@ section {
   padding: 0;
   background: linear-gradient(0deg, #EAEAEA 95%, lightgrey 100%);
   transform-origin: top;
-  animation: location-opening 250ms 62.5ms both ease-out;
+  animation: location-opening 250ms 250ms both ease-out;
 }
 .location i {
   margin-right: 1rem;

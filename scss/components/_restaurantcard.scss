@@ -10,9 +10,8 @@
         padding:13px;
         height:5rem;
         display:flex;
-        flex-direction: row;
         justify-content: space-between;
-        object-fit: fill;
+        object-fit: contain;
     }
     > img {
         position:relative;

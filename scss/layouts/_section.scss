@@ -1,7 +1,6 @@
 
 body {
-  display: flex;
-  flex-direction: column;
+  position: relative;
   margin:auto;
   width: 100%;
   max-width: 1440px;
@@ -11,10 +10,7 @@ main {
 width: 100%;
 max-width: 1440px;
 display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-overflow: hidden;
+@include flexCenter(column);
 background-color: white;
 }
 
