@@ -1,0 +1,138 @@
+// sass
+//Var
+//colors
+$colorArray: #354558 #625059 #905b5c #bd665e #eb7260;
+$base: #E9E0D6;
+$primary: #000000;
+$accent: #ffffff;
+$secondary: #a9a9a9;
+$n: 5;
+$loaderdur:2000ms;
+
+//mixins
+// @mixin fhover($color) {
+//   &:hover {
+//     transition: 350ms ease-in-out;
+//     color:  $color;
+//     transform: scale(1.4)
+//     }
+// }
+
+@mixin flex() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+   
+// @mixin center {
+//     position: absolute;
+//     left: 50%;
+//     top: 50%;
+//     transform: translate(-50%, -50%);
+// }
+  
+// @mixin aline {
+//     top: 50%;
+//     transform: translateY(-50%);
+// }
+
+// reset
+.loader {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 500px;
+// h1,h2,h3,h4,h5,h6,a,p,span {
+//     padding-bottom: 0.714em !important;
+//     padding-top: 0.714em !important;
+//     text-transform: uppercase;
+//     letter-spacing: 0.1em;
+//     font-weight: 400;
+//     color: $accent;
+//     font-weight: bold;
+//     text-align: center;
+// }
+    background: $base;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+  
+  
+// .noselect {
+//     user-select: none;
+// }
+
+.artboard {
+    width: 100%;
+    height: 100%;
+    @include flex;
+    position: absolute;
+}
+  
+.domino {
+    & > div {
+        border-radius: 8px;
+        display: inline-flex;
+        transform: rotate(45deg);
+        width: 50px;
+        height: 50px;
+        animation: domino-effect $loaderdur infinite ease-in-out;
+        
+        @each $current-color in $colorArray {
+            $i: index($colorArray, $current-color) ;
+            &:nth-child(#{$i}){
+                background: $current-color;
+                &:after {
+                background: $current-color;
+                animation-delay: #{$loaderdur *0.25 * $i};
+                }
+            }
+        }
+        @for $i from 1 through $n {
+            &:nth-child(#{$i}){
+                margin: 23px;
+                animation-delay: #{$loaderdur *0.25 * $i};
+            }
+        }
+        &:after {
+            content: '';
+            position: relative;
+            top: 0px;
+            left: -70px;
+            opacity: 0;
+            border-radius: 8px;
+            width: 50px;
+            height: 50px;
+            animation:  illusion $loaderdur infinite ease-in-out;
+        }
+    }
+}
+  
+  
+    
+      
+
+//animation
+
+  @keyframes spin {
+    to {
+      transform: rotate(140deg);
+    }
+  }
+  @keyframes domino-effect {
+    20%, 100% {
+      transform: rotate(135deg);
+    }
+  }
+  @keyframes illusion {
+    0%, 25% {
+      opacity: 1;
+    }
+    26.10%, 33.33%, 100% {
+      opacity: 0;
+    }
+  }   

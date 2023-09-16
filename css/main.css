@@ -194,98 +194,6 @@ img {
   transform: translateX(0);
 }
 
-.foodcard2 {
-  display: flex;
-  height: 69px;
-  margin-bottom: 1.125rem;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0px;
-}
-.foodcard2 h3 {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  font-size: 1.125rem;
-  font-weight: 500;
-}
-.foodcard2 p {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  font-size: 0.9rem;
-}
-.foodcard2__content {
-  position: relative;
-  display: flex;
-  width: 100%;
-  margin: 13px;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.foodcard2__content::after {
-  content: " ";
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 20%;
-  position: relative;
-  background-color: red;
-}
-.foodcard2__price {
-  position: absolute;
-  right: 0;
-  padding: 0;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  font-weight: bolder;
-}
-.foodcard2__price span {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  align-items: flex-end;
-  position: relative;
-  padding: 1rem;
-  width: 3rem;
-}
-.foodcard2__price i {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-color: #99E2D0;
-  color: white;
-  height: 100%;
-  width: 3.75rem;
-}
-.foodcard2 .checked {
-  transform: translateX(60%);
-  transition: all 0.25s ease-in-out;
-  height: 100%;
-}
-.foodcard2 input[type=checkbox] {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-.foodcard2 input[type=checkbox]:hover {
-  cursor: pointer;
-}
-.foodcard2 input[type=checkbox]:checked ~ .checked {
-  transform: translateX(0);
-}
-
 .restaurantcard {
   width: 100%;
   max-width: 500px;
@@ -412,6 +320,122 @@ img {
   cursor: pointer;
 }
 
+.loader {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 500px;
+  background: #E9E0D6;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+}
+
+.artboard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: absolute;
+}
+
+.domino > div {
+  border-radius: 8px;
+  display: inline-flex;
+  transform: rotate(45deg);
+  width: 50px;
+  height: 50px;
+  animation: domino-effect 2000ms infinite ease-in-out;
+}
+.domino > div:nth-child(1) {
+  background: #354558;
+}
+.domino > div:nth-child(1):after {
+  background: #354558;
+  animation-delay: 500ms;
+}
+.domino > div:nth-child(2) {
+  background: #625059;
+}
+.domino > div:nth-child(2):after {
+  background: #625059;
+  animation-delay: 1000ms;
+}
+.domino > div:nth-child(3) {
+  background: #905b5c;
+}
+.domino > div:nth-child(3):after {
+  background: #905b5c;
+  animation-delay: 1500ms;
+}
+.domino > div:nth-child(4) {
+  background: #bd665e;
+}
+.domino > div:nth-child(4):after {
+  background: #bd665e;
+  animation-delay: 2000ms;
+}
+.domino > div:nth-child(5) {
+  background: #eb7260;
+}
+.domino > div:nth-child(5):after {
+  background: #eb7260;
+  animation-delay: 2500ms;
+}
+.domino > div:nth-child(1) {
+  margin: 23px;
+  animation-delay: 500ms;
+}
+.domino > div:nth-child(2) {
+  margin: 23px;
+  animation-delay: 1000ms;
+}
+.domino > div:nth-child(3) {
+  margin: 23px;
+  animation-delay: 1500ms;
+}
+.domino > div:nth-child(4) {
+  margin: 23px;
+  animation-delay: 2000ms;
+}
+.domino > div:nth-child(5) {
+  margin: 23px;
+  animation-delay: 2500ms;
+}
+.domino > div:after {
+  content: "";
+  position: relative;
+  top: 0px;
+  left: -70px;
+  opacity: 0;
+  border-radius: 8px;
+  width: 50px;
+  height: 50px;
+  animation: illusion 2000ms infinite ease-in-out;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(140deg);
+  }
+}
+@keyframes domino-effect {
+  20%, 100% {
+    transform: rotate(135deg);
+  }
+}
+@keyframes illusion {
+  0%, 25% {
+    opacity: 1;
+  }
+  26.10%, 33.33%, 100% {
+    opacity: 0;
+  }
+}
 article {
   display: flex;
   flex-direction: column;
@@ -658,12 +682,18 @@ section {
 
 .menu {
   position: relative;
-  top: -30px;
   max-width: 1080px;
   background-color: #F6F6F6;
-  padding: 1rem;
+}
+.menu::before {
+  position: absolute;
+  content: "";
+  top: -30px;
+  width: 100%;
+  height: 30px;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
+  background-color: #F6F6F6;
 }
 .menu__block {
   display: flex;
@@ -684,7 +714,6 @@ section {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  margin: 1rem;
 }
 .menu__title h1 {
   font-family: "Shrikhand", cursive;
