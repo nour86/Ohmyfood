@@ -409,26 +409,6 @@ img {
   margin: 1.5rem;
   animation-delay: 2500ms;
 }
-.domino > div:nth-child(6) {
-  margin: 1.5rem;
-  animation-delay: 3000ms;
-}
-.domino > div:nth-child(7) {
-  margin: 1.5rem;
-  animation-delay: 3500ms;
-}
-.domino > div:nth-child(8) {
-  margin: 1.5rem;
-  animation-delay: 4000ms;
-}
-.domino > div:nth-child(9) {
-  margin: 1.5rem;
-  animation-delay: 4500ms;
-}
-.domino > div:nth-child(10) {
-  margin: 1.5rem;
-  animation-delay: 5000ms;
-}
 .domino > div:after {
   content: "";
   position: relative;
