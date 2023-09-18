@@ -2,10 +2,8 @@
     display:flex;
     height: 69px;
     margin-bottom: 1.125rem;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap:0px;
     h3{
         @include ellipsis;
         font-size: 1.125rem;
@@ -15,12 +13,16 @@
         @include ellipsis;
         font-size: 0.9rem;
     }
+
+    //descriptif de l'article
     &__content {
         width:90%;
         margin:13px;
         white-space: nowrap;
         overflow: hidden;
     }
+
+    //prix et icône
     &__price {
         position:relative;
         padding:0;

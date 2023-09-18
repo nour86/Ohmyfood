@@ -3,7 +3,7 @@
     margin:1rem;
     width:1.5rem;
     object-fit: contain; 
-    z-index: 2;
+    z-index: 2; // placé au dessus de l'élément <a> qui est en z index 1
     & img {
         position:absolute;             //pour superposer les deux images svg
     }
