@@ -13,7 +13,7 @@ $loaderdur:2000ms;
     height: 100%;
     display: flex;
     justify-content: center;
-    // align-items: center; comment aligner au milieu du viewport?
+    align-items: center;
     z-index: 1;
     transform:scale(0.001);
     animation: loader-in $loaderdur*1.5 forwards ease-in-out; /* le loader occupe toute la page pendant 3s puis disparait */
@@ -31,7 +31,7 @@ $loaderdur:2000ms;
 
   
 .domino {
-    margin-top:30vh;
+    top:50vh;
     animation: slide-out 0.5s $loaderdur+0.5s forwards ease-out; // animation de sortie
     & > div {
         border-radius: 0.5rem;
