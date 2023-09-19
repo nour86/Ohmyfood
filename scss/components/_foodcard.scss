@@ -1,5 +1,6 @@
 .foodcard {
     display:flex;
+    flex-direction: row;
     height: 69px;
     margin-bottom: 1.125rem;
     justify-content: space-between;
@@ -16,6 +17,8 @@
 
     //descriptif de l'article
     &__content {
+        display:flex;
+        flex-direction:column;
         width:90%;
         margin:13px;
         white-space: nowrap;

@@ -12,6 +12,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 p {
   font-size: 1.125rem;
   font-weight: 300;
@@ -117,12 +121,11 @@ img {
 }
 .foodcard {
   display: flex;
+  flex-direction: row;
   height: 69px;
   margin-bottom: 1.125rem;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 0px;
 }
 .foodcard h3 {
   white-space: nowrap;
@@ -138,6 +141,8 @@ img {
   font-size: 0.9rem;
 }
 .foodcard__content {
+  display: flex;
+  flex-direction: column;
   width: 90%;
   margin: 13px;
   white-space: nowrap;
@@ -354,6 +359,20 @@ img {
   height: 3rem;
   animation: domino-effect 2000ms backwards ease-out;
 }
+.domino > div:after {
+  content: "";
+  position: relative;
+  top: 0px;
+  left: -4.5rem;
+  opacity: 0;
+  border-radius: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  animation: illusion 2000ms forwards ease-out;
+}
+.domino > div:last-child:after {
+  animation: size-up 1s 2000ms forwards ease-in-out;
+}
 .domino > div:nth-child(1) {
   background: #FF79DA;
 }
@@ -408,20 +427,6 @@ img {
 .domino > div:nth-child(5) {
   margin: 1.5rem;
   animation-delay: 2500ms;
-}
-.domino > div:after {
-  content: "";
-  position: relative;
-  top: 0px;
-  left: -4.5rem;
-  opacity: 0;
-  border-radius: 0.5rem;
-  width: 3rem;
-  height: 3rem;
-  animation: illusion 2000ms forwards ease-out;
-}
-.domino > div:last-child:after {
-  animation: size-up 1s 2000ms forwards ease-in-out;
 }
 
 @keyframes loader-in {

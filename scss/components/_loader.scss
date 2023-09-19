@@ -13,6 +13,7 @@ $loaderdur:2000ms;
     height: 100%;
     display: flex;
     justify-content: center;
+    // align-items: center; comment aligner au milieu du viewport?
     z-index: 1;
     transform:scale(0.001);
     animation: loader-in $loaderdur*1.5 forwards ease-in-out; /* le loader occupe toute la page pendant 3s puis disparait */
@@ -39,7 +40,20 @@ $loaderdur:2000ms;
         width: 3rem;
         height: 3rem;
         animation: domino-effect $loaderdur backwards ease-out; // rotation de 135deg 
-        
+        &:after {
+            content: '';
+            position: relative;
+            top: 0px;
+            left: -4.5rem;
+            opacity: 0;
+            border-radius: 0.5rem;
+            width: 3rem;
+            height: 3rem;
+            animation:  illusion $loaderdur forwards ease-out;
+        }
+        &:last-child:after {
+            animation: size-up 1s $loaderdur forwards ease-in-out;
+        }
         @each $current-color in $colorArray { // couleurs de fond des carrés
             $i: index($colorArray, $current-color) ;
             &:nth-child(#{$i}){
@@ -56,26 +70,13 @@ $loaderdur:2000ms;
                 animation-delay: #{$loaderdur *0.25 * $i};
             }
         }
-        &:after {
-            content: '';
-            position: relative;
-            top: 0px;
-            left: -4.5rem;
-            opacity: 0;
-            border-radius: 0.5rem;
-            width: 3rem;
-            height: 3rem;
-            animation:  illusion $loaderdur forwards ease-out;
-        }
-        &:last-child:after {
-            animation: size-up 1s $loaderdur forwards ease-in-out;
-        }
+
     }
 }
    
 
 //animation
-@keyframes loader-in {   
+@keyframes loader-in {
     1% {transform:scale(1);
     }
     99% {
