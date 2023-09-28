@@ -3,12 +3,10 @@ body {
   position: relative;
   margin:auto;
   width: 100%;
-  max-width: 1440px;
 }
 
 main {
 width: 100%;
-max-width: 1440px;
 display: flex;
 @include flexCenter(column);
 background-color: white;

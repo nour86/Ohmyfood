@@ -550,12 +550,10 @@ body {
   position: relative;
   margin: auto;
   width: 100%;
-  max-width: 1440px;
 }
 
 main {
   width: 100%;
-  max-width: 1440px;
   display: flex;
   display: flex;
   flex-direction: column;
