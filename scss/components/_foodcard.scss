@@ -5,24 +5,23 @@
     margin-bottom: 1.125rem;
     justify-content: space-between;
     align-items: center;
-    h3{
-        @include ellipsis;
-        font-size: 1.125rem;
-        font-weight:500;
-    }
-    p {
-        @include ellipsis;
-        font-size: 0.9rem;
-    }
 
     //descriptif de l'article
     &__content {
         display:flex;
         flex-direction:column;
-        width:90%;
         margin:13px;
         white-space: nowrap;
         overflow: hidden;
+        h3{
+            @include ellipsis;
+            font-size: 1.125rem;
+            font-weight:500;
+        }
+        p {
+            @include ellipsis;
+            font-size: 0.9rem;
+        }
     }
 
     //prix et icône
@@ -50,30 +49,6 @@
 
     }
 
-    // anim version avec translate mais sans ellipsis dynamique //
-
-    // & .checked {
-    //         transform:translateX(60%); // décalé de 60% sur la droite par défaut
-    //         transition: all 0.25s ease-in-out;
-    //         height:100%;
-    // }
-
-    // input[type="checkbox"]{
-    //     position:absolute; // prend toute la taille de la carte
-    //     width: 100%;
-    //     height: 100%;
-    //     z-index: 1;
-    //     appearance: none; // checkbox invisible
-    //     &:hover{
-    //         cursor:pointer;
-    //     }
-    //     &:checked~.checked {
-    //         transform:translateX(0); // tag recentré lorsque la box est checké
-    //     }
-    // }
-
-    // anim avec modif layout pour ellipsis dynamique //
-    
     & .checked {
         height:100%;
         overflow:hidden;
@@ -101,5 +76,28 @@
             }
         }
     }
-   
+
+    // anim version avec translate mais sans ellipsis dynamique //
+
+    // & .checked {
+    //         transform:translateX(60%); // décalé de 60% sur la droite par défaut
+    //         transition: all 0.25s ease-in-out;
+    //         height:100%;
+    // }
+
+    // input[type="checkbox"]{
+    //     position:absolute; // prend toute la taille de la carte
+    //     width: 100%;
+    //     height: 100%;
+    //     z-index: 1;
+    //     appearance: none; // checkbox invisible
+    //     &:hover{
+    //         cursor:pointer;
+    //     }
+    //     &:checked~.checked {
+    //         transform:translateX(0); // tag recentré lorsque la box est checké
+    //     }
+    // }
+
+    // anim avec modif layout pour ellipsis dynamique //   
 }

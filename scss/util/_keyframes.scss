@@ -22,21 +22,6 @@ $anim-delay:250ms;
 }
 }
 
-@keyframes hide-arrow {
-    0%{
-        opacity:1;
-    }
-    80%{
-        opacity:0.6;
-    }
-    90%{
-        opacity:0.4;
-    }
-    100%{
-        opacity:0;
-    }
-}
-
 @keyframes location-opening {
     0%{
         transform:translateY(-200px);
