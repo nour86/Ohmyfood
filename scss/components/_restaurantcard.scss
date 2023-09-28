@@ -8,21 +8,20 @@
     margin-bottom: 1.125rem;
     &__content {
         padding:13px;
-        height:5rem;
         display:flex;
         justify-content: space-between;
         object-fit: contain;
+        h3 {
+            font-size: 1.125rem;        
+        }
+        p {
+            font-size:1.075rem;
+        }
     }
     > img {
         position:relative;
-        height:50vw;
-        @include media-min($medium) {
-            height: 30vw;
-        }
-        @include media-min($large) {
-            height: 20vw;
-            max-height: 172px;
-        }
+        height:188px;
+        max-height: 20vh;
     } 
     a {
         position :absolute;
