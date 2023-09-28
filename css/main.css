@@ -6,11 +6,6 @@
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
-@media screen and (max-width: 375px) {
-  * {
-    font-size: 12px;
-  }
-}
 
 html {
   scroll-behavior: smooth;
@@ -199,26 +194,21 @@ img {
 }
 .restaurantcard__content {
   padding: 13px;
-  height: 5rem;
   display: flex;
   justify-content: space-between;
   -o-object-fit: contain;
      object-fit: contain;
 }
+.restaurantcard__content h3 {
+  font-size: 1.125rem;
+}
+.restaurantcard__content p {
+  font-size: 1.075rem;
+}
 .restaurantcard > img {
   position: relative;
-  height: 50vw;
-}
-@media screen and (min-width: 768px) {
-  .restaurantcard > img {
-    height: 30vw;
-  }
-}
-@media screen and (min-width: 1080px) {
-  .restaurantcard > img {
-    height: 20vw;
-    max-height: 172px;
-  }
+  height: 188px;
+  max-height: 20vh;
 }
 .restaurantcard a {
   position: absolute;
@@ -282,7 +272,7 @@ img {
 
 .heartbox {
   position: relative;
-  margin: 1rem;
+  margin: 0.5rem;
   width: 1.5rem;
   -o-object-fit: contain;
      object-fit: contain;
@@ -344,19 +334,19 @@ img {
   border-radius: 0.5rem;
   display: inline-flex;
   transform: rotate(45deg);
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   animation: domino-effect 2000ms backwards ease-out;
 }
 .domino > div:after {
   content: "";
   position: relative;
   top: 0px;
-  left: -4.5rem;
+  left: -3rem;
   opacity: 0;
   border-radius: 0.5rem;
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   animation: illusion 2000ms forwards ease-out;
 }
 .domino > div:last-child:after {
@@ -398,23 +388,23 @@ img {
   animation-delay: 2500ms;
 }
 .domino > div:nth-child(1) {
-  margin: 1.5rem;
+  margin: 1rem;
   animation-delay: 500ms;
 }
 .domino > div:nth-child(2) {
-  margin: 1.5rem;
+  margin: 1rem;
   animation-delay: 1000ms;
 }
 .domino > div:nth-child(3) {
-  margin: 1.5rem;
+  margin: 1rem;
   animation-delay: 1500ms;
 }
 .domino > div:nth-child(4) {
-  margin: 1.5rem;
+  margin: 1rem;
   animation-delay: 2000ms;
 }
 .domino > div:nth-child(5) {
-  margin: 1.5rem;
+  margin: 1rem;
   animation-delay: 2500ms;
 }
 
@@ -451,12 +441,12 @@ img {
     transform: scale(1);
     opacity: 1;
   }
-  40% {
-    transform: scale(1.5);
-    opacity: 1;
+  30% {
+    transform: scale(2);
+    opacity: 0.5;
   }
-  100% {
-    transform: scale(0);
+  60% {
+    transform: scale(1);
     opacity: 0;
   }
 }
@@ -464,8 +454,11 @@ img {
   30% {
     transform: rotate(135deg);
   }
+  50% {
+    transform: rotate(90deg);
+  }
   100% {
-    transform: rotate(135deg);
+    transform: rotate(90deg);
   }
 }
 @keyframes illusion {
@@ -476,11 +469,11 @@ img {
   25% {
     opacity: 1;
     transform: scale(1);
-    transform: rotate(135deg);
+    transform: rotate(-135deg);
   }
   50% {
     opacity: 0;
-    transform: scale(0.2);
+    transform: scale(0.01);
   }
 }
 article {
