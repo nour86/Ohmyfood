@@ -93,17 +93,14 @@
     & h2 {align-self: start;}
     &__grid {
         display:flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
+        gap:18px;
         width:100%;
-    }
-
-    //media querries //
-    @include media-min($medium) {
-        &__grid{
+        @include media-min($medium) {
             max-width: 1120px;
-            flex-direction: row;
-            flex-wrap: wrap;
             justify-content: space-between;
             gap:50px;
         }

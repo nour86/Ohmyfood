@@ -690,15 +690,16 @@ section {
 }
 .restaurants__grid {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
+  gap: 18px;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
   .restaurants__grid {
     max-width: 1120px;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
     gap: 50px;
   }

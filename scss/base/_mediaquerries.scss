@@ -1,5 +1,3 @@
-// extra small smartphone
-$xsmall:375px;
 // Small tablets and large smartphones (landscape view)
 $small:576px;
 // Small tablets (portrait view)
@@ -18,3 +16,4 @@ $large:1080px;
     &{ @content; }
 }
 }
+
