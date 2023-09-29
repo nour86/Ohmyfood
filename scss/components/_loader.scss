@@ -29,7 +29,7 @@ $loaderdur:2000ms;
     }
 }
 
-  
+
 .domino {
     position:relative;
     top:50vh;
@@ -40,7 +40,7 @@ $loaderdur:2000ms;
         transform: rotate(45deg);
         width: 2rem;
         height: 2rem;
-        animation: domino-effect $loaderdur backwards ease-out; // rotation de 135deg 
+        animation: domino-effect $loaderdur backwards ease-out; // rotation
         &:after {
             content: '';
             position: relative;
@@ -108,7 +108,6 @@ $loaderdur:2000ms;
         transform:scale(2);
         opacity: 0.5;
     }
-
     60% {
         transform:scale(1);
         opacity: 0;
@@ -119,11 +118,9 @@ $loaderdur:2000ms;
     30% {
         transform: rotate(135deg);
     }
-
     50% {
         transform: rotate(90deg);
     }
-
     100% {
         transform: rotate(90deg);
     }

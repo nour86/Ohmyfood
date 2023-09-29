@@ -15,8 +15,6 @@
         overflow: hidden;
         h3{
             @include ellipsis;
-            font-size: 1.125rem;
-            font-weight:500;
         }
         p {
             @include ellipsis;
