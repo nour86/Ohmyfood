@@ -11,6 +11,12 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  position: relative;
+  margin: auto;
+  width: 100%;
+}
+
 p {
   font-size: 1.125rem;
   font-weight: 300;
@@ -546,12 +552,6 @@ header i {
   left: 1.5rem;
 }
 
-body {
-  position: relative;
-  margin: auto;
-  width: 100%;
-}
-
 main {
   width: 100%;
   display: flex;
@@ -639,9 +639,9 @@ section {
   display: grid;
   align-items: center;
   width: 100%;
-  max-width: 400px;
+  max-width: 324px;
   font-size: 1.2rem;
-  grid-template-columns: 70px 3fr;
+  grid-template-columns: 50px 3fr;
   justify-items: left;
   background-color: #EAEAEA;
 }

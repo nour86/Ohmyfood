@@ -37,9 +37,9 @@
         @include box-shadow;
         @include buttonshape {
         width: 100%;
-        max-width: 400px;
+        max-width: 324px;
         font-size: 1.2rem;
-        grid-template-columns: 70px 3fr;
+        grid-template-columns: 50px 3fr;
         justify-items:left;
         background-color:$secondary-bg-color;
         }
