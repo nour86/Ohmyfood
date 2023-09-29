@@ -1,5 +1,5 @@
-$colorArray: #FF79DA #E470da #b762db #9356dc #eb7260;
-$n: 5;
+$colorArray: #FF79DA #E470da #b762db #9356dc;
+$n: 4;
 $loaderdur:2000ms;
 
 
@@ -52,6 +52,12 @@ $loaderdur:2000ms;
             height: 2rem;
             animation:  illusion $loaderdur forwards ease-out;
         }
+        @for $i from 1 through $n {
+            &:nth-child(#{$i}){
+                margin: 1rem;
+                animation-delay: #{$loaderdur *0.25 * $i};
+            }
+        }
         &:last-child:after {
             animation: size-up 1s $loaderdur forwards ease-in-out;
         }
@@ -65,13 +71,6 @@ $loaderdur:2000ms;
                 }
             }
         }
-        @for $i from 1 through $n {
-            &:nth-child(#{$i}){
-                margin: 1rem;
-                animation-delay: #{$loaderdur *0.25 * $i};
-            }
-        }
-
     }
 }
    

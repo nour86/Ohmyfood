@@ -353,6 +353,22 @@ img {
   height: 2rem;
   animation: illusion 2000ms forwards ease-out;
 }
+.domino > div:nth-child(1) {
+  margin: 1rem;
+  animation-delay: 500ms;
+}
+.domino > div:nth-child(2) {
+  margin: 1rem;
+  animation-delay: 1000ms;
+}
+.domino > div:nth-child(3) {
+  margin: 1rem;
+  animation-delay: 1500ms;
+}
+.domino > div:nth-child(4) {
+  margin: 1rem;
+  animation-delay: 2000ms;
+}
 .domino > div:last-child:after {
   animation: size-up 1s 2000ms forwards ease-in-out;
 }
@@ -383,33 +399,6 @@ img {
 .domino > div:nth-child(4):after {
   background: #9356dc;
   animation-delay: 2000ms;
-}
-.domino > div:nth-child(5) {
-  background: #eb7260;
-}
-.domino > div:nth-child(5):after {
-  background: #eb7260;
-  animation-delay: 2500ms;
-}
-.domino > div:nth-child(1) {
-  margin: 1rem;
-  animation-delay: 500ms;
-}
-.domino > div:nth-child(2) {
-  margin: 1rem;
-  animation-delay: 1000ms;
-}
-.domino > div:nth-child(3) {
-  margin: 1rem;
-  animation-delay: 1500ms;
-}
-.domino > div:nth-child(4) {
-  margin: 1rem;
-  animation-delay: 2000ms;
-}
-.domino > div:nth-child(5) {
-  margin: 1rem;
-  animation-delay: 2500ms;
 }
 
 @keyframes loader-in {
