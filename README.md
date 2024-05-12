@@ -1,36 +1,66 @@
-# Booki
-### OpenClassrooms P3 - Création de la page d'accueil d'une agence de voyage avec HTML & CSS
+# OhMyFood
+### OpenClassrooms P4 - Amélioration de l'interface d'un site mobile avec des animations CSS
 
-**Booki** est un **site Internet** qui permet aux usagers de **trouver des hébergements** et des activités dans la ville de leur choix.
-L'objectif est d'**intégrer l'interface** du site avec du code **HTML et CSS**, à partir de maquettes Figma.
+L'objectif est d'intégrer puis de dynamiser une page web avec des animations CSS en utilisant le préprocesseur Sass
 
-Mon site est visible sur : [Booki](https://nour86.github.io/Ohmyfood/)
 
-## Spécifications fonctionnelles
-* Les usagers pourront **rechercher des hébergements dans la ville de leur choix** avec un champ de recherche, dans lequel ils peuvent saisir une ville *(recherche non fonctionnelle – première version pour valider l'interface)*
+Mon site est visible sur : [OhMyFood](https://nour86.github.io/Ohmyfood/)
 
-* **"Hébergements"** et **"Activités"**, situés sur le **menu** dans l'en-tête, sont des **liens**. Ils mènent respectivement vers la section "Hébergements à Marseille" et "Activités à Marseille".
+## Objectifs
 
-* **Chaque carte d'hébergement** ou **d'activité** est **cliquable** dans son intégralité.
+1. Développer un site proposant le menu de 4 grands restaurants parisiens.
+2. Permettre la réservation en ligne et la composition de menus.
 
-* Les hébergements pourront être **filtrés** par thématiques, comme le budget ou l'ambiance. Les filtres changent de **couleur** au **survol** de la souris. *(filtres non fonctionnels – première version pour valider l'interface)*
+## Livrables
 
-## Spécifications techniques
-* Trois **maquettes** ont été réalisées : **desktop**, **tablette** et **mobile**.
-* Les **breakpoints** ont été définis tel quels:
-  * \> 1024px pour les écrans d'ordinateur
-  * \>= 768 px pour les tablettes
-  * \< 768px pour les téléphones portables
-* **Largeur maximum** de **1440px**
-* **Largeur minimum** de **320px** *(en-deça, le comportement n'est pas garanti)*
-* L'intégration a d'abord été réalisée pour les ordinateurs (**desktop-first**), puis les tablettes et enfin les téléphones, en utilisant les **Media Queries**.
-* Les icônes proviennent de la bibliothèque [Font Awesome](https://fontawesome.com/docs/web/setup/get-started)
-* Les couleurs de la charte sont le **bleu (#0065FC)**, le **bleu clair (#DEEBFF)** et le **gris** pour le
-fond **(#F2F2F2)**.
-* La police du site est [Raleway](https://fonts.google.com/specimen/Raleway)
-* La mise en page est réalisée avec **Flexbox**
-* Utilisation des **balises sémantiques** : *header*, *nav*, *h1/h2/h3*, *main*, *section*, *article* et *footer*
-* Le code passe les **validateurs W3C** [HTML](https://validator.w3.org/) et [CSS](https://jigsaw.w3.org/css-validator/)
+### Pages à intégrer selon les maquettes
+
+- **Page d’accueil**
+- **Pages de menu (x4)**
+
+### Animation
+
+**Boutons**
+- Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir. L’ombre portée devra également être plus visible.
+- À terme, les visiteurs pourront sauvegarder leurs menus préférés. Pour ça, unbouton "J’aime" en forme de cœur est présent sur la maquette. Au clic, il devra se remplir progressivement. Pour cette première version, l’effet peut être apparaître au survol au lieu du clic.
+
+**Page d’accueil**
+- Quand l’application aura plus de menus, un “loading spinner” sera nécessaire. Sur cette maquette, nous souhaitons en avoir un aperçu. Il devra apparaître pendant 1 à 3 secondes quand on arrive sur la page d'accueil, couvrir l'intégralité de l'écran, et utiliser les animations CSS (pas de librairie). Le design de ce loader n’est pas défini,toute proposition est donc la bienvenue tant qu’elle est cohérente avec la chartegraphique du site.
+
+**Pages de menu**
+- À l’arrivée sur la page, les plats devront apparaître progressivement avec un léger décalage dans le temps. Ils pourront soit apparaître un par un, soit par groupe “Entrée”, “Plat” et “Dessert”. Un exemple de l’effet attendu est fourni.
+- Le visiteur peut ajouter les plats qu'il souhaite à sa commande en cliquant dessus. Cela fait apparaître une petite coche à droite du plat. Cette coche devra coulisser dela droite vers la gauche. Pour cette première version, l’effet peut apparaître au survolau lieu du clic. Si l’intitulé du plat est trop long, il devra être rogné avec des points de suspension. Un exemple de l’effet attendu est fourni
+
+## Technologies
+
+**Autorisés:** HTML / CSS / Sass
+
+**Recommandée:** HTML / Sass
+
+**Interdit:** Javascript / Frameworks CSS / Inline CSS
+
+## Notes
+
+**Polices :**
+- Logo & titres: Shrikhand
+- Texte: Roboto
+
+**Couleurs :**
+- Primaire: #9356DC
+- Secondaire: #FF79DA
+- Tertiaire: #99E2D0
+- Principal-background: #EAEAEA
+- Main-container: #F6F6F6
+- Hard-grey: #353535
+- New: #2FAF94
+
+**Contraintes :**
+- Approche mobile-first: oui
+- Maquette mobile : oui
+- Maquette desktop : à improviser
+- Validation W3C HTML : à passer, warning autorisés
+- Validation W3C CSS : à passer, warning autorisés
+- Compatibilité : Dernières versions de Chrome, Firefox & Safari
 
 ## Tester le projet
 
@@ -46,3 +76,4 @@ Et lancez le serveur !
 ```terminal
 npm start
 ```
+
