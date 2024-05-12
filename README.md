@@ -1,4 +1,6 @@
 # OhMyFood
+![ohmyfoodcover](https://github.com/nour86/Ohmyfood/assets/71932371/265c480d-72e4-4949-a006-1729b84445e7)
+
 ### OpenClassrooms P4 - Amélioration de l'interface d'un site mobile avec des animations CSS
 
 L'objectif est d'intégrer puis de dynamiser une page web avec des animations CSS en utilisant le préprocesseur Sass
